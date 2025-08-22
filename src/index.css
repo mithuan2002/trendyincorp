@@ -9,69 +9,83 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 215 28% 17%;
+    --foreground: 215 20% 27%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 28% 17%;
+    --card-foreground: 215 20% 27%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 28% 17%;
+    --popover-foreground: 215 20% 27%;
 
-    --primary: 215 30% 15%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 220 90% 56%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 215 28% 17%;
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220 9% 46%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
 
-    --accent: 38 85% 55%;
-    --accent-foreground: 215 30% 15%;
+    --accent: 262 83% 58%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 215 30% 15%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 220 90% 56%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    /* Custom design tokens */
-    --navy-deep: 215 30% 15%;
-    --navy-medium: 215 25% 25%;
-    --navy-light: 215 20% 35%;
+    /* Modern Light Design System */
+    --blue-50: 220 100% 99%;
+    --blue-100: 220 43% 96%;
+    --blue-200: 220 38% 92%;
+    --blue-300: 220 35% 85%;
+    --blue-400: 220 74% 74%;
+    --blue-500: 220 90% 56%;
+    --blue-600: 220 100% 45%;
+    --blue-700: 220 87% 40%;
+    --blue-800: 220 85% 34%;
+    --blue-900: 220 84% 29%;
     
-    --gold-vibrant: 38 85% 55%;
-    --gold-muted: 38 60% 45%;
-    --gold-soft: 38 40% 35%;
+    --purple-50: 270 100% 98%;
+    --purple-100: 269 100% 95%;
+    --purple-400: 262 83% 70%;
+    --purple-500: 262 83% 58%;
+    --purple-600: 262 83% 48%;
     
-    --gray-50: 210 40% 98%;
-    --gray-100: 210 40% 96%;
-    --gray-200: 214 32% 91%;
-    --gray-300: 213 27% 84%;
-    --gray-400: 215 20% 65%;
-    --gray-500: 215 16% 47%;
-    --gray-600: 215 19% 35%;
-    --gray-700: 215 25% 27%;
-    --gray-800: 215 28% 17%;
-    --gray-900: 215 33% 9%;
+    --gray-25: 220 9% 98%;
+    --gray-50: 220 9% 96%;
+    --gray-100: 220 9% 89%;
+    --gray-200: 220 9% 78%;
+    --gray-300: 220 9% 68%;
+    --gray-400: 220 9% 58%;
+    --gray-500: 220 9% 46%;
+    --gray-600: 220 9% 36%;
+    --gray-700: 220 9% 26%;
+    --gray-800: 215 20% 17%;
+    --gray-900: 220 18% 12%;
     
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--navy-deep)), hsl(var(--navy-medium)));
-    --gradient-accent: linear-gradient(135deg, hsl(var(--gold-vibrant)), hsl(var(--gold-muted)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--navy-deep)) 0%, hsl(var(--navy-medium)) 100%);
+    /* Modern Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--blue-500)), hsl(var(--purple-500)));
+    --gradient-light: linear-gradient(135deg, hsl(var(--blue-50)), hsl(var(--purple-50)));
+    --gradient-soft: linear-gradient(180deg, hsl(var(--blue-50)), hsl(var(--background)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--blue-500)) 0%, hsl(var(--purple-500)) 100%);
     
-    /* Shadows */
-    --shadow-soft: 0 2px 8px hsl(var(--navy-deep) / 0.05);
-    --shadow-medium: 0 4px 12px hsl(var(--navy-deep) / 0.1);
-    --shadow-strong: 0 8px 24px hsl(var(--navy-deep) / 0.15);
-    --shadow-gold: 0 4px 12px hsl(var(--gold-vibrant) / 0.2);
+    /* Modern Shadows */
+    --shadow-xs: 0 1px 2px hsl(var(--gray-900) / 0.05);
+    --shadow-sm: 0 1px 3px hsl(var(--gray-900) / 0.1), 0 1px 2px hsl(var(--gray-900) / 0.06);
+    --shadow-md: 0 4px 6px hsl(var(--gray-900) / 0.07), 0 2px 4px hsl(var(--gray-900) / 0.06);
+    --shadow-lg: 0 10px 15px hsl(var(--gray-900) / 0.1), 0 4px 6px hsl(var(--gray-900) / 0.05);
+    --shadow-xl: 0 20px 25px hsl(var(--gray-900) / 0.1), 0 10px 10px hsl(var(--gray-900) / 0.04);
+    --shadow-glow: 0 0 0 1px hsl(var(--blue-500) / 0.05), 0 4px 16px hsl(var(--blue-500) / 0.12);
     
-    /* Animations */
+    /* Modern Animations */
+    --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-fast: all 0.15s ease-out;
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 

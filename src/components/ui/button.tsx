@@ -9,18 +9,18 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
-        destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
+        default: "bg-primary text-primary-foreground hover:bg-primary/90 transition-smooth",
+        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+        outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground transition-smooth",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-smooth",
+        ghost: "hover:bg-accent hover:text-accent-foreground transition-smooth",
         link: "text-primary underline-offset-4 hover:underline",
-        hero: "bg-gradient-accent text-navy-deep font-semibold hover:shadow-gold transition-all duration-300 hover:scale-105",
-        professional: "bg-navy-deep text-primary-foreground hover:bg-navy-medium transition-smooth shadow-medium hover:shadow-strong",
-        accent: "bg-gold-vibrant text-navy-deep font-medium hover:bg-gold-muted transition-smooth",
+        modern: "bg-gradient-primary text-white font-medium hover:shadow-glow hover:scale-105 transition-bounce border-0",
+        light: "bg-blue-50 text-blue-700 hover:bg-blue-100 hover:shadow-md transition-smooth border border-blue-200",
+        minimal: "bg-white text-gray-700 hover:bg-gray-50 hover:shadow-md transition-smooth border border-gray-200",
+        hero: "bg-gradient-primary text-white font-semibold hover:shadow-glow hover:scale-105 transition-bounce border-0 shadow-md",
+        professional: "bg-blue-600 text-white hover:bg-blue-700 transition-smooth shadow-md hover:shadow-lg",
+        accent: "bg-purple-500 text-white font-medium hover:bg-purple-600 hover:shadow-md transition-smooth",
       },
       size: {
         default: "h-10 px-4 py-2",

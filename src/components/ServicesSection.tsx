@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { 
   Scissors, 
   Palette, 
@@ -7,64 +8,84 @@ import {
   Settings, 
   CheckCircle,
   Globe,
-  Clock
+  Clock,
+  Sparkles,
+  ArrowRight
 } from "lucide-react";
 
 const ServicesSection = () => {
   const services = [
     {
       icon: Scissors,
-      title: "Cut & Sew Manufacturing",
-      description: "Complete garment manufacturing from cutting to finished products with precision and quality control.",
-      features: ["Pattern Making", "Cutting Services", "Assembly Line Production", "Quality Control"]
+      title: "Smart Manufacturing",
+      description: "AI-powered cut & sew operations with precision and real-time quality monitoring.",
+      features: ["Automated Cutting", "Digital Workflows", "Quality Control", "Lean Production"],
+      color: "blue"
     },
     {
       icon: Palette,
-      title: "Design & Development",
-      description: "Creative design solutions and technical development for fashion-forward European markets.",
-      features: ["Fashion Design", "Technical Sketching", "Sample Development", "Color Consultation"]
+      title: "Creative Development",
+      description: "Innovative design solutions and rapid prototyping for modern European markets.",
+      features: ["Trend Forecasting", "3D Prototyping", "Color Innovation", "Design Consultation"],
+      color: "purple"
     },
     {
       icon: Shield,
-      title: "Quality Assurance",
-      description: "Rigorous quality control processes ensuring European standards and compliance.",
-      features: ["EU Standards", "Quality Testing", "Compliance Certification", "Final Inspection"]
+      title: "Quality Excellence",
+      description: "Advanced testing and compliance systems ensuring premium European standards.",
+      features: ["EU Certification", "Automated Testing", "Sustainability Standards", "Traceability"],
+      color: "green"
     },
     {
       icon: Truck,
-      title: "Export & Logistics",
-      description: "Comprehensive export services with reliable logistics for timely global deliveries.",
-      features: ["Global Shipping", "Custom Clearance", "Documentation", "Supply Chain"]
+      title: "Global Logistics",
+      description: "Smart supply chain solutions with real-time tracking and optimized delivery.",
+      features: ["Express Shipping", "Real-time Tracking", "Digital Documentation", "Carbon Neutral"],
+      color: "orange"
     },
     {
       icon: Settings,
-      title: "Private Labeling",
-      description: "Complete private label solutions for brands looking to manufacture in India.",
-      features: ["Brand Development", "Label Production", "Packaging Design", "Market Strategy"]
+      title: "Brand Partnership",
+      description: "Complete white-label solutions and brand development for modern retailers.",
+      features: ["Brand Strategy", "Custom Labeling", "Digital Assets", "Market Intelligence"],
+      color: "pink"
     },
     {
       icon: Globe,
-      title: "Sustainable Production",
-      description: "Eco-friendly manufacturing processes aligned with global sustainability goals.",
-      features: ["Organic Materials", "Eco-Friendly Dyes", "Waste Management", "Green Certification"]
+      title: "Sustainable Future",
+      description: "Next-generation eco-friendly processes aligned with climate goals.",
+      features: ["Circular Economy", "Zero Waste", "Clean Energy", "Social Impact"],
+      color: "teal"
     }
   ];
 
+  const getColorClasses = (color: string) => {
+    const colorMap = {
+      blue: { bg: "bg-blue-50", border: "border-blue-100", text: "text-blue-600", icon: "text-blue-600" },
+      purple: { bg: "bg-purple-50", border: "border-purple-100", text: "text-purple-600", icon: "text-purple-600" },
+      green: { bg: "bg-green-50", border: "border-green-100", text: "text-green-600", icon: "text-green-600" },
+      orange: { bg: "bg-orange-50", border: "border-orange-100", text: "text-orange-600", icon: "text-orange-600" },
+      pink: { bg: "bg-pink-50", border: "border-pink-100", text: "text-pink-600", icon: "text-pink-600" },
+      teal: { bg: "bg-teal-50", border: "border-teal-100", text: "text-teal-600", icon: "text-teal-600" }
+    };
+    return colorMap[color as keyof typeof colorMap] || colorMap.blue;
+  };
+
   return (
-    <section id="services" className="py-20 bg-gray-50">
+    <section id="services" className="py-20 bg-gray-25">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-gold-vibrant/10 text-gold-vibrant rounded-full px-4 py-2 mb-4">
-            <Settings className="h-4 w-4 mr-2" />
-            <span className="text-sm font-medium">Our Services</span>
+          <div className="inline-flex items-center bg-purple-50 border border-purple-200 text-purple-700 rounded-full px-4 py-2 mb-4">
+            <Sparkles className="h-4 w-4 mr-2" />
+            <span className="text-sm font-medium">Our Innovation</span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-navy-deep mb-6">
-            Comprehensive Manufacturing Solutions
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            Next-Gen Manufacturing Solutions
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            From concept to delivery, we provide end-to-end garment manufacturing services 
-            tailored for European quality standards and market demands.
+            Advanced technology meets traditional craftsmanship to deliver exceptional 
+            results for forward-thinking European brands.
           </p>
         </div>
 
@@ -72,13 +93,14 @@ const ServicesSection = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => {
             const IconComponent = service.icon;
+            const colors = getColorClasses(service.color);
             return (
-              <Card key={index} className="group hover:shadow-strong transition-all duration-300 hover:-translate-y-2 border-0 shadow-medium">
+              <Card key={index} className="group hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border-0 shadow-lg bg-white/80 backdrop-blur-sm">
                 <CardHeader className="pb-4">
-                  <div className="w-14 h-14 bg-gradient-accent rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <IconComponent className="h-7 w-7 text-navy-deep" />
+                  <div className={`w-14 h-14 ${colors.bg} ${colors.border} border rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                    <IconComponent className={`h-7 w-7 ${colors.icon}`} />
                   </div>
-                  <CardTitle className="text-xl text-navy-deep group-hover:text-gold-vibrant transition-colors">
+                  <CardTitle className="text-xl text-gray-900 group-hover:text-blue-600 transition-colors">
                     {service.title}
                   </CardTitle>
                 </CardHeader>
@@ -89,7 +111,9 @@ const ServicesSection = () => {
                   <ul className="space-y-2">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-700">
-                        <CheckCircle className="h-4 w-4 text-gold-vibrant mr-2 flex-shrink-0" />
+                        <div className={`w-4 h-4 ${colors.bg} ${colors.border} border rounded-full flex items-center justify-center mr-3 flex-shrink-0`}>
+                          <CheckCircle className={`h-2.5 w-2.5 ${colors.icon}`} />
+                        </div>
                         {feature}
                       </li>
                     ))}
@@ -101,22 +125,29 @@ const ServicesSection = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center bg-gradient-hero rounded-2xl p-12 text-white">
-          <Clock className="h-12 w-12 text-gold-vibrant mx-auto mb-6" />
-          <h3 className="text-3xl font-bold mb-4">
-            Ready to Start Your Manufacturing Project?
-          </h3>
-          <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-            Get a detailed quote for your garment manufacturing requirements. 
-            Our team will respond within 24 hours with a comprehensive proposal.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gold-vibrant text-navy-deep font-semibold px-8 py-3 rounded-lg hover:bg-gold-muted transition-smooth hover:scale-105">
-              Request Quote
-            </button>
-            <button className="border-2 border-white/30 text-white font-semibold px-8 py-3 rounded-lg hover:bg-white/10 transition-smooth">
-              Schedule Consultation
-            </button>
+        <div className="bg-gradient-primary rounded-3xl p-12 text-white shadow-xl relative overflow-hidden">
+          {/* Background elements */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-32 translate-x-32"></div>
+          <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full blur-2xl translate-y-24 -translate-x-24"></div>
+          
+          <div className="relative z-10 text-center">
+            <Clock className="h-12 w-12 text-white mx-auto mb-6 animate-float" />
+            <h3 className="text-3xl font-bold mb-4">
+              Ready to Innovate Together?
+            </h3>
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              Partner with us for cutting-edge manufacturing solutions that set new industry standards. 
+              Get your personalized proposal within 24 hours.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="light" size="lg" className="group shadow-lg">
+                Request Innovation Brief
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+              <Button variant="minimal" size="lg" className="bg-white/10 text-white border-white/20 hover:bg-white/20">
+                Schedule Tech Demo
+              </Button>
+            </div>
           </div>
         </div>
       </div>
