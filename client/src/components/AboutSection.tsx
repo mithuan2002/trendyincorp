@@ -72,7 +72,7 @@ const AboutSection = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center bg-blue-50 border border-blue-200 text-blue-700 rounded-full px-4 py-2 mb-4">
             <MapPin className="h-4 w-4 mr-2" />
-            <span className="text-sm font-medium">About <span className="text-white bg-blue-600 px-2 py-1 rounded">Trendy</span> <span className="text-blue-600 font-bold">Incorp</span></span>
+            <span className="text-sm font-medium">About <span className="text-white font-bold">Trendy</span> <span className="text-blue-600 font-bold">Incorp</span></span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Tirupur's Innovation Leader
@@ -92,7 +92,7 @@ const AboutSection = () => {
                 Redefining Export Excellence
               </h3>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                At <span className="font-semibold text-white bg-blue-600 px-2 py-1 rounded">Trendy</span> <span className="font-semibold text-blue-600">Incorp</span>, we blend traditional craftsmanship with modern innovation. 
+                At <span className="font-semibold text-white">Trendy</span> <span className="font-semibold text-blue-600">Incorp</span>, we blend traditional craftsmanship with modern innovation. 
                 Our smart manufacturing facilities in Tirupur represent the future of textile 
                 production, delivering premium quality garments to discerning European markets.
               </p>

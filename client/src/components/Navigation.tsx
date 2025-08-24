@@ -30,7 +30,7 @@ const Navigation = () => {
               }}
             />
             <div className="hidden flex-col items-start">
-              <h1 className="text-2xl font-bold tracking-wider text-white bg-blue-600 px-2 py-1 rounded">
+              <h1 className="text-2xl font-bold tracking-wider text-white">
                 TRENDY
               </h1>
               <h1 className="text-2xl font-bold tracking-wider text-blue-600 -mt-1">
