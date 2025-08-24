@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Globe, Award, Users, Sparkles, Play } from "lucide-react";
+import { Globe, Award, Users, Sparkles } from "lucide-react";
 import heroImage from "@/assets/hero-manufacturing.jpg";
 
 const HeroSection = () => {
@@ -22,7 +21,6 @@ const HeroSection = () => {
             </div>
             
             <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight text-gray-900">
-              Future of
               <span className="block text-transparent bg-clip-text bg-gradient-primary">
                 Garment Export
               </span>
@@ -33,15 +31,27 @@ const HeroSection = () => {
               to European markets through innovation and sustainability.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button variant="hero" size="lg" className="group shadow-lg">
-                Explore Innovation
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button variant="light" size="lg" className="group">
-                <Play className="mr-2 h-5 w-5" />
-                Watch Story
-              </Button>
+            {/* Real-time Manufacturing Video */}
+            <div className="mb-12 max-w-lg">
+              <div className="relative rounded-2xl overflow-hidden shadow-lg border border-gray-200">
+                <video 
+                  autoPlay 
+                  muted 
+                  loop 
+                  playsInline
+                  className="w-full h-48 object-cover"
+                >
+                  <source src="https://assets.codepen.io/6093409/river.mp4" type="video/mp4" />
+                  <div className="bg-gray-100 h-48 flex items-center justify-center">
+                    <p className="text-gray-500">Manufacturing process preview</p>
+                  </div>
+                </video>
+                <div className="absolute top-3 right-3 bg-red-500 text-white text-xs px-2 py-1 rounded-full flex items-center">
+                  <div className="w-2 h-2 bg-white rounded-full mr-1 animate-pulse"></div>
+                  LIVE
+                </div>
+              </div>
+              <p className="text-sm text-gray-500 mt-2 text-center">Real-time garment manufacturing process</p>
             </div>
 
             {/* Stats */}
