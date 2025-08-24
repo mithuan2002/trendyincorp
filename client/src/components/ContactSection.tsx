@@ -64,11 +64,10 @@ const ContactSection = () => {
                   <div>
                     <div className="flex items-center mb-4">
                       <Phone className="h-6 w-6 text-purple-600 mr-3" />
-                      <h3 className="text-xl font-semibold text-gray-900">Phone</h3>
+                      <h3 className="text-xl font-semibold text-gray-900">Call or WhatsApp</h3>
                     </div>
                     <div className="space-y-2 text-gray-700">
                       <p className="text-lg font-semibold">+91 9952800900</p>
-                      <p>099528 00900</p>
                     </div>
                   </div>
                 </div>
@@ -123,10 +122,10 @@ const ContactSection = () => {
 
                   {/* Contact Card */}
                   <div className="bg-blue-600 text-white p-6 rounded-2xl shadow-lg">
-                    <h4 className="text-lg font-bold mb-3">Quick Contact</h4>
+                    <h4 className="text-lg font-bold mb-3">Ready to Connect?</h4>
                     <div className="space-y-2">
                       <p className="font-semibold">TRENDY INCORP</p>
-                      <p className="text-blue-100">📞 099528 00900</p>
+                      <p className="text-blue-100">📧 Reach out for inquiries</p>
                     </div>
                   </div>
                 </div>
