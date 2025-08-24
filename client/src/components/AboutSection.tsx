@@ -72,7 +72,7 @@ const AboutSection = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center bg-blue-50 border border-blue-200 text-blue-700 rounded-full px-4 py-2 mb-4">
             <MapPin className="h-4 w-4 mr-2" />
-            <span className="text-sm font-medium">About Trendy Incorp</span>
+            <span className="text-sm font-medium">About <span className="text-white">Trendy</span> <span className="text-blue-600">Incorp</span></span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Tirupur's Innovation Leader
@@ -92,7 +92,7 @@ const AboutSection = () => {
                 Redefining Export Excellence
               </h3>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                At Trendy Incorp, we blend traditional craftsmanship with modern innovation. 
+                At <span className="font-semibold text-white">Trendy</span> <span className="font-semibold text-blue-600">Incorp</span>, we blend traditional craftsmanship with modern innovation. 
                 Our smart manufacturing facilities in Tirupur represent the future of textile 
                 production, delivering premium quality garments to discerning European markets.
               </p>
@@ -438,7 +438,7 @@ const AboutSection = () => {
             {/* Header */}
             <div className="text-center mb-16">
               <h3 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                Trendy Incorp: pioneering textile excellence
+                <span className="text-white font-bold">Trendy</span> <span className="text-blue-600 font-bold">Incorp</span>: pioneering textile excellence
               </h3>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Discover our dynamic textile manufacturing expertise and commitment to quality
@@ -496,7 +496,7 @@ const AboutSection = () => {
             {/* Partnership Call to Action */}
             <div className="text-center mt-16">
               <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-                Trendy Incorp's clientele consists of forward-thinking business executives who are dedicated to advancing 
+                <span className="text-white font-semibold">Trendy</span> <span className="text-blue-600 font-semibold">Incorp's</span> clientele consists of forward-thinking business executives who are dedicated to advancing 
                 their brands with cutting-edge technologies
               </p>
               <Button variant="light" size="lg" className="group shadow-lg bg-green-500 hover:bg-green-600 text-white border-0">

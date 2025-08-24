@@ -30,10 +30,10 @@ const Navigation = () => {
               }}
             />
             <div className="hidden flex-col items-start">
-              <h1 className="text-2xl font-bold tracking-wider text-gray-800">
+              <h1 className="text-2xl font-bold tracking-wider text-white">
                 TRENDY
               </h1>
-              <h1 className="text-2xl font-bold tracking-wider text-gray-800 -mt-1">
+              <h1 className="text-2xl font-bold tracking-wider text-blue-600 -mt-1">
                 INC<span className="inline-flex items-center mx-1">⚡</span>RP
               </h1>
             </div>
