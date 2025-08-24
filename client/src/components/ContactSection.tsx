@@ -34,19 +34,21 @@ const ContactSection = () => {
             <div className="absolute bottom-0 left-0 w-24 h-24 bg-green-100/30 rounded-full blur-xl translate-y-12 -translate-x-12"></div>
             
             <CardContent className="p-12 relative z-10">
+              {/* Company Details Header - Centered at Top */}
+              <div className="text-center mb-12">
+                <div className="flex items-center justify-center mb-4">
+                  <Building className="h-6 w-6 text-blue-600 mr-3" />
+                  <h3 className="text-2xl font-bold text-gray-900">Company Details</h3>
+                </div>
+                <div className="space-y-3 text-gray-700">
+                  <p className="text-xl font-bold text-blue-700">TRENDY INCORP</p>
+                  <p className="text-lg">Attn:- Mr. Ravi Shankar</p>
+                </div>
+              </div>
+
               <div className="grid md:grid-cols-2 gap-12">
-                {/* Company Information */}
+                {/* Contact Information */}
                 <div className="space-y-8">
-                  <div>
-                    <div className="flex items-center mb-4">
-                      <Building className="h-6 w-6 text-blue-600 mr-3" />
-                      <h3 className="text-2xl font-bold text-gray-900">Company Details</h3>
-                    </div>
-                    <div className="space-y-3 text-gray-700">
-                      <p className="text-xl font-bold text-blue-700">TRENDY INCORP</p>
-                      <p className="text-lg">Attn:- Mr. Ravi Shankar</p>
-                    </div>
-                  </div>
 
                   <div>
                     <div className="flex items-center mb-4">
