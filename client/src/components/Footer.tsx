@@ -40,7 +40,7 @@ const Footer = () => {
                 <Sparkles className="h-5 w-5 text-white" />
               </div>
               <h3 className="text-2xl font-bold">
-                <span className="text-white">Trendy</span> <span className="text-blue-600">Incorp</span>
+                Trendy <span className="text-blue-400">Incorp</span>
               </h3>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed text-sm">
@@ -121,7 +121,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center text-sm text-gray-400 mb-4 md:mb-0">
-              <span>&copy; 2024 <span className="text-white font-semibold">Trendy</span> <span className="text-blue-400 font-semibold">Incorp</span>. Crafting the future.</span>
+              <span>&copy; 2024 Trendy Incorp. Crafting the future.</span>
             </div>
             
             <div className="flex items-center text-sm text-gray-400">
