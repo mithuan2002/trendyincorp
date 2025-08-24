@@ -83,90 +83,71 @@ const AboutSection = () => {
           </p>
         </div>
 
-        {/* Main Content Grid */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
-          {/* Content */}
-          <div className="space-y-8 animate-fade-in">
-            <div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                Redefining Export Excellence
-              </h3>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                At Trendy Incorp, we blend traditional craftsmanship with modern innovation. 
-                Our smart manufacturing facilities in Tirupur represent the future of textile 
-                production, delivering premium quality garments to discerning European markets.
-              </p>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                We specialize in next-generation knitted and woven garments, serving progressive 
-                fashion brands across Germany, France, Italy, and the Netherlands with our 
-                commitment to quality, sustainability, and ethical manufacturing.
-              </p>
+        {/* Excellence Section */}
+        <div className="bg-gray-50 rounded-3xl p-12 mb-16">
+          <div className="text-center mb-12">
+            <h3 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              Trendy Incorp: pioneering textile excellence
+            </h3>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover our dynamic textile manufacturing expertise and commitment to quality
+            </p>
+          </div>
 
-              {/* Simple Bullet Points */}
-              <ul className="space-y-3 text-lg text-gray-700">
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-4"></div>
-                  Sustainable Eco Friendly products
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-4"></div>
-                  Enhancing fabrics
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-4"></div>
-                  Fabric formation
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-4"></div>
-                  Final product creation
-                </li>
-              </ul>
+          {/* Statistics with Map */}
+          <div className="relative max-w-5xl mx-auto mb-12">
+            {/* Central Map Area */}
+            <div className="flex justify-center items-center min-h-[400px] relative">
+              {/* India Map Placeholder */}
+              <div className="w-80 h-60 bg-gradient-to-br from-blue-100 to-blue-200 rounded-3xl flex items-center justify-center relative">
+                <div className="text-6xl text-blue-300">🇮🇳</div>
+                {/* Location dots */}
+                <div className="absolute top-1/2 left-1/2 w-3 h-3 bg-blue-600 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
+                <div className="absolute top-1/3 right-1/4 w-2 h-2 bg-blue-500 rounded-full"></div>
+                <div className="absolute bottom-1/3 left-1/3 w-2 h-2 bg-blue-500 rounded-full"></div>
+              </div>
 
-              {/* Buttons below bullet points */}
-              <div className="flex flex-col sm:flex-row gap-4 mt-8">
-                <Button variant="light" size="lg" className="group shadow-lg">
-                  About Us
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </Button>
-                <Button variant="minimal" size="lg">
-                  Contact Us
-                </Button>
+              {/* Statistics positioned around the map */}
+              {/* Top Left */}
+              <div className="absolute top-0 left-0 text-center">
+                <div className="text-4xl font-bold text-gray-900 mb-2">25 Years</div>
+                <div className="text-gray-600">in the Market</div>
+              </div>
+
+              {/* Top Right */}
+              <div className="absolute top-0 right-0 text-center">
+                <div className="text-4xl font-bold text-gray-900 mb-2">100+</div>
+                <div className="text-gray-600">Satisfied Clients</div>
+              </div>
+
+              {/* Bottom Left */}
+              <div className="absolute bottom-0 left-0 text-center">
+                <div className="text-4xl font-bold text-gray-900 mb-2">50+</div>
+                <div className="text-gray-600">Visited Conference</div>
+              </div>
+
+              {/* Bottom Right */}
+              <div className="absolute bottom-0 right-0 text-center">
+                <div className="text-4xl font-bold text-gray-900 mb-2">200+</div>
+                <div className="text-gray-600">High qualified Employees</div>
               </div>
             </div>
           </div>
 
-          {/* Images */}
-          <div className="space-y-6 animate-scale-in" style={{ animationDelay: '0.2s' }}>
-            <div className="relative group">
-              <img 
-                src={qualityGarmentsImage} 
-                alt="Premium quality garments for European markets" 
-                className="w-full h-64 object-cover rounded-2xl shadow-lg group-hover:shadow-xl transition-shadow"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-2xl"></div>
-              <div className="absolute bottom-6 left-6 text-white">
-                <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 mb-2">
-                  <Award className="h-4 w-4 mr-2" />
-                  <span className="text-sm font-medium">Premium Quality</span>
-                </div>
-                <h4 className="text-lg font-semibold">European Standards</h4>
-              </div>
-            </div>
-            <div className="relative group">
-              <img 
-                src={tirupurIndustrialImage} 
-                alt="Tirupur textile industrial landscape" 
-                className="w-full h-48 object-cover rounded-2xl shadow-lg group-hover:shadow-xl transition-shadow"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-2xl"></div>
-              <div className="absolute bottom-4 left-6 text-white">
-                <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 mb-2">
-                  <MapPin className="h-4 w-4 mr-2" />
-                  <span className="text-sm font-medium">Strategic Location</span>
-                </div>
-                <h4 className="text-lg font-semibold">Tirupur Hub</h4>
-              </div>
-            </div>
+          {/* Description */}
+          <div className="text-center mb-8">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Trendy Incorp's clientele consists of forward-thinking business executives who are dedicated to advancing 
+              their brands with cutting-edge technologies
+            </p>
+          </div>
+
+          {/* CTA Button */}
+          <div className="text-center">
+            <Button variant="hero" size="lg" className="group shadow-lg bg-green-500 hover:bg-green-600 text-white">
+              BECOME OUR PARTNER
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
           </div>
         </div>
 
