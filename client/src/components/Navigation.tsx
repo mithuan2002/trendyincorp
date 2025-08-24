@@ -19,12 +19,14 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-4">
-            <img 
-              src="/attached_assets/trendy_logo_new.png" 
-              alt="Trendy Incorp Logo" 
-              className="h-14 w-auto object-contain bg-transparent"
-              style={{ maxWidth: '200px' }}
-            />
+            <div className="flex flex-col items-start">
+              <h1 className="text-2xl font-bold tracking-wider text-gray-800">
+                TRENDY
+              </h1>
+              <h1 className="text-2xl font-bold tracking-wider text-gray-800 -mt-1">
+                INC<span className="inline-flex items-center mx-1">⚡</span>RP
+              </h1>
+            </div>
             <div className="hidden lg:block">
               <p className="text-sm text-gray-700 font-semibold">Major exporter to international market</p>
             </div>
