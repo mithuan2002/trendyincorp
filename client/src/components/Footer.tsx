@@ -40,7 +40,7 @@ const Footer = () => {
                 <Sparkles className="h-5 w-5 text-white" />
               </div>
               <h3 className="text-2xl font-bold">
-                Trendy <span className="text-blue-400">Incorp</span>
+                <span className="text-white bg-blue-600 px-2 py-1 rounded font-bold">Trendy</span> <span className="text-blue-600 font-bold">Incorp</span>
               </h3>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed text-sm">
