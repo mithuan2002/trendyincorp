@@ -415,10 +415,16 @@ const AboutSection = () => {
           </div>
 
           <div className="text-center">
-            <Button variant="hero" size="lg" className="group shadow-lg">
-              Get Catalogue
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <a 
+              href="https://drive.google.com/file/d/1x6HL-cNxdVrGj6q-ayFXC_psgVCLl1X3/view?usp=sharing" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Button variant="hero" size="lg" className="group shadow-lg bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-8 text-lg">
+                Get Catalogue
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </a>
           </div>
         </div>
 
