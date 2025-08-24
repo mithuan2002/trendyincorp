@@ -37,7 +37,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
               <h3 className="text-2xl font-bold">
-                <span className="inline-flex items-center mr-2">⚡</span><span className="text-black font-bold">Trendy</span> <span className="text-blue-600 font-bold">Incorp</span>
+                <span className="inline-flex items-center mr-2">⚡</span><span className="text-black font-bold" style={{color: '#000000'}}>Trendy</span> <span className="text-blue-600 font-bold">Incorp</span>
               </h3>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed text-sm">

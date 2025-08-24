@@ -127,7 +127,7 @@ const AboutSection = () => {
                 Redefining Export Excellence
               </h3>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                At <span className="font-semibold text-black">Trendy</span> <span className="font-semibold text-blue-600">Incorp</span>, we blend traditional craftsmanship with modern innovation. 
+                At <span className="font-semibold text-black" style={{color: '#000000'}}>Trendy</span> <span className="font-semibold text-blue-600">Incorp</span>, we blend traditional craftsmanship with modern innovation. 
                 Our smart manufacturing facilities in Tirupur represent the future of textile 
                 production, delivering premium quality garments to discerning European markets.
               </p>
