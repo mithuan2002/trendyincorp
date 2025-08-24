@@ -19,7 +19,17 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-4">
-            <div className="flex flex-col items-start">
+            <img 
+              src="/trendy_logo_new.png" 
+              alt="Trendy Incorp Logo" 
+              className="h-12 w-auto object-contain"
+              onError={(e) => {
+                // Fallback to text logo if image fails to load
+                e.currentTarget.style.display = 'none';
+                e.currentTarget.nextElementSibling?.classList.remove('hidden');
+              }}
+            />
+            <div className="hidden flex-col items-start">
               <h1 className="text-2xl font-bold tracking-wider text-gray-800">
                 TRENDY
               </h1>
