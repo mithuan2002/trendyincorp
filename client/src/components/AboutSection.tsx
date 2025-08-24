@@ -33,18 +33,28 @@ const AboutSection = () => {
     },
     {
       icon: Leaf,
-      title: "Sustainable Manufacturing",
+      title: "Sustainable Eco Friendly Products",
       description: "Committed to eco-friendly processes and sustainable textile production methods."
     },
     {
       icon: Clock,
-      title: "Timely Delivery",
-      description: "Reliable supply chain management ensuring on-time delivery for global markets."
+      title: "Enhancing Fabrics",
+      description: "Advanced fabric enhancement techniques for superior quality and durability."
     },
     {
       icon: Lightbulb,
-      title: "Innovation Focus",
-      description: "Continuous investment in modern technology and innovative manufacturing processes."
+      title: "Fabric Formation",
+      description: "Expert fabric formation processes using cutting-edge technology and techniques."
+    },
+    {
+      icon: Factory,
+      title: "Final Product Creation",
+      description: "Complete end-to-end manufacturing for premium finished textile products."
+    },
+    {
+      icon: Users,
+      title: "About Us & Contact Us",
+      description: "Learn more about our company and get in touch for business inquiries."
     }
   ];
 
@@ -87,7 +97,7 @@ const AboutSection = () => {
             </div>
 
             {/* Values Grid */}
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {values.map((value, index) => {
                 const IconComponent = value.icon;
                 return (
