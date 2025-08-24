@@ -89,29 +89,35 @@ const AboutSection = () => {
                 Our smart manufacturing facilities in Tirupur represent the future of textile 
                 production, delivering premium quality garments to discerning European markets.
               </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 We specialize in next-generation knitted and woven garments, serving progressive 
                 fashion brands across Germany, France, Italy, and the Netherlands with our 
                 commitment to quality, sustainability, and ethical manufacturing.
               </p>
-            </div>
 
-            {/* Values Grid */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {values.map((value, index) => {
-                const IconComponent = value.icon;
-                return (
-                  <div key={index} className="flex items-start space-x-3 p-4 bg-gray-25 rounded-xl border border-gray-100 hover:shadow-md transition-smooth">
-                    <div className="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <IconComponent className="h-5 w-5 text-blue-600" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">{value.title}</h4>
-                      <p className="text-sm text-gray-600">{value.description}</p>
-                    </div>
-                  </div>
-                );
-              })}
+              {/* Simple Bullet Points */}
+              <ul className="space-y-3 text-lg text-gray-700">
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-4"></div>
+                  Sustainable Eco Friendly products
+                </li>
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-4"></div>
+                  Enhancing fabrics
+                </li>
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-4"></div>
+                  Fabric formation
+                </li>
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-4"></div>
+                  Final product creation
+                </li>
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-4"></div>
+                  About us & contact us
+                </li>
+              </ul>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
