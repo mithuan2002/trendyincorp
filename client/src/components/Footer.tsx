@@ -4,8 +4,7 @@ const Footer = () => {
   const quickLinks = [
     { name: "Innovation Story", href: "#about" },
     { name: "Smart Services", href: "#services" },
-    { name: "Quality Standards", href: "#quality" },
-    { name: "Partnership", href: "#contact" },
+    { name: "Contact Us", href: "#contact" },
   ];
 
   const services = [
@@ -61,10 +60,6 @@ const Footer = () => {
               <div className="flex items-center text-sm text-gray-300">
                 <Phone className="h-4 w-4 mr-2 text-green-400 flex-shrink-0" />
                 <span>+91 9952800900 (WhatsApp)</span>
-              </div>
-              <div className="flex items-center text-sm text-gray-300">
-                <Mail className="h-4 w-4 mr-2 text-purple-400 flex-shrink-0" />
-                <span>hello@trendyincorp.com</span>
               </div>
             </div>
           </div>
