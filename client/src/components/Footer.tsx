@@ -49,13 +49,18 @@ const Footer = () => {
               innovation, sustainability, and excellence in European market exports.
             </p>
             <div className="space-y-3">
-              <div className="flex items-center text-sm text-gray-300">
-                <MapPin className="h-4 w-4 mr-2 text-blue-400 flex-shrink-0" />
-                <span>Tirupur Innovation District, Tamil Nadu</span>
+              <div className="flex items-start text-sm text-gray-300">
+                <MapPin className="h-4 w-4 mr-2 text-blue-400 flex-shrink-0 mt-0.5" />
+                <div>
+                  <div>S.F.No. 7A/3B, KANAKKAMPALAYAM PIRIVU,</div>
+                  <div>BEHIND LPG GAS BUNK,</div>
+                  <div>P.N ROAD</div>
+                  <div>TIRUPUR - 641666</div>
+                </div>
               </div>
               <div className="flex items-center text-sm text-gray-300">
                 <Phone className="h-4 w-4 mr-2 text-green-400 flex-shrink-0" />
-                <span>+91 9876543210 (WhatsApp)</span>
+                <span>+91 9952800900 (WhatsApp)</span>
               </div>
               <div className="flex items-center text-sm text-gray-300">
                 <Mail className="h-4 w-4 mr-2 text-purple-400 flex-shrink-0" />
@@ -64,11 +69,11 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Sitemap */}
           <div>
             <h4 className="text-lg font-semibold mb-4 text-blue-400 flex items-center">
               <Globe className="h-4 w-4 mr-2" />
-              Quick Links
+              Sitemap
             </h4>
             <ul className="space-y-2">
               {quickLinks.map((link, index) => (
