@@ -171,77 +171,182 @@ const AboutSection = () => {
               <span className="text-sm font-medium">Our Process</span>
             </div>
             <h3 className="text-3xl font-bold text-gray-900 mb-4">From Cotton to Garment</h3>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
               Our streamlined manufacturing process ensures quality at every step
             </p>
+            <p className="text-sm text-gray-500 italic">Swipe through each card to explore our manufacturing journey</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Cotton Selection */}
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-blue-200">
-              <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center mb-4">
-                <Leaf className="h-6 w-6 text-white" />
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* Cotton Selection */}
+              <div className="group relative bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-blue-200 overflow-hidden cursor-pointer">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="p-8 relative z-10">
+                  <div className="flex items-start gap-6">
+                    <div className="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <Leaf className="h-8 w-8 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="text-2xl font-bold text-gray-900 mb-3">Cotton Selection</h4>
+                      <p className="text-gray-600 mb-4">Premium quality cotton sourcing from certified organic farms</p>
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
+                        <div className="w-full h-32 bg-blue-200 rounded-xl mb-4 flex items-center justify-center">
+                          <span className="text-blue-600 font-medium">Cotton Fields Image</span>
+                        </div>
+                        <p className="text-sm text-blue-700 bg-blue-50 p-3 rounded-lg">
+                          We carefully select the finest cotton fibers, ensuring each batch meets our stringent quality standards for softness, durability, and eco-friendliness.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Cotton Selection</h4>
-              <p className="text-sm text-gray-600">Premium quality cotton sourcing</p>
-            </div>
 
-            {/* Spinning */}
-            <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-purple-200">
-              <div className="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center mb-4">
-                <Zap className="h-6 w-6 text-white" />
+              {/* Spinning */}
+              <div className="group relative bg-gradient-to-br from-purple-50 to-purple-100 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-purple-200 overflow-hidden cursor-pointer">
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="p-8 relative z-10">
+                  <div className="flex items-start gap-6">
+                    <div className="w-16 h-16 bg-purple-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <Zap className="h-8 w-8 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="text-2xl font-bold text-gray-900 mb-3">Spinning</h4>
+                      <p className="text-gray-600 mb-4">High-tech yarn production with precision engineering</p>
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
+                        <div className="w-full h-32 bg-purple-200 rounded-xl mb-4 flex items-center justify-center">
+                          <span className="text-purple-600 font-medium">Spinning Machines Image</span>
+                        </div>
+                        <p className="text-sm text-purple-700 bg-purple-50 p-3 rounded-lg">
+                          Advanced spinning technology transforms cotton into uniform, strong yarns with consistent thickness and superior tensile strength.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Spinning</h4>
-              <p className="text-sm text-gray-600">High-tech yarn production</p>
-            </div>
 
-            {/* Knitting */}
-            <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-green-200">
-              <div className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center mb-4">
-                <Factory className="h-6 w-6 text-white" />
+              {/* Knitting */}
+              <div className="group relative bg-gradient-to-br from-green-50 to-green-100 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-green-200 overflow-hidden cursor-pointer">
+                <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="p-8 relative z-10">
+                  <div className="flex items-start gap-6">
+                    <div className="w-16 h-16 bg-green-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <Factory className="h-8 w-8 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="text-2xl font-bold text-gray-900 mb-3">Knitting</h4>
+                      <p className="text-gray-600 mb-4">Advanced fabric construction with computerized precision</p>
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
+                        <div className="w-full h-32 bg-green-200 rounded-xl mb-4 flex items-center justify-center">
+                          <span className="text-green-600 font-medium">Knitting Machines Image</span>
+                        </div>
+                        <p className="text-sm text-green-700 bg-green-50 p-3 rounded-lg">
+                          State-of-the-art knitting machines create seamless, breathable fabrics with perfect stitch consistency and optimal stretch properties.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Knitting</h4>
-              <p className="text-sm text-gray-600">Advanced fabric construction</p>
-            </div>
 
-            {/* Dyeing & Finishing */}
-            <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-orange-200">
-              <div className="w-12 h-12 bg-orange-500 rounded-xl flex items-center justify-center mb-4">
-                <Award className="h-6 w-6 text-white" />
+              {/* Dyeing & Finishing */}
+              <div className="group relative bg-gradient-to-br from-orange-50 to-orange-100 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-orange-200 overflow-hidden cursor-pointer">
+                <div className="absolute inset-0 bg-gradient-to-r from-orange-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="p-8 relative z-10">
+                  <div className="flex items-start gap-6">
+                    <div className="w-16 h-16 bg-orange-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <Award className="h-8 w-8 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="text-2xl font-bold text-gray-900 mb-3">Dyeing & Finishing</h4>
+                      <p className="text-gray-600 mb-4">Color perfection & treatment with eco-friendly processes</p>
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
+                        <div className="w-full h-32 bg-orange-200 rounded-xl mb-4 flex items-center justify-center">
+                          <span className="text-orange-600 font-medium">Dyeing Process Image</span>
+                        </div>
+                        <p className="text-sm text-orange-700 bg-orange-50 p-3 rounded-lg">
+                          Revolutionary dyeing techniques ensure vibrant, long-lasting colors while maintaining fabric integrity and environmental compliance.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Dyeing & Finishing</h4>
-              <p className="text-sm text-gray-600">Color perfection & treatment</p>
-            </div>
 
-            {/* All over Printing */}
-            <div className="bg-gradient-to-br from-pink-50 to-pink-100 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-pink-200">
-              <div className="w-12 h-12 bg-pink-500 rounded-xl flex items-center justify-center mb-4">
-                <Lightbulb className="h-6 w-6 text-white" />
+              {/* All over Printing */}
+              <div className="group relative bg-gradient-to-br from-pink-50 to-pink-100 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-pink-200 overflow-hidden cursor-pointer">
+                <div className="absolute inset-0 bg-gradient-to-r from-pink-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="p-8 relative z-10">
+                  <div className="flex items-start gap-6">
+                    <div className="w-16 h-16 bg-pink-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <Lightbulb className="h-8 w-8 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="text-2xl font-bold text-gray-900 mb-3">All over Printing</h4>
+                      <p className="text-gray-600 mb-4">Creative design application with digital precision</p>
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
+                        <div className="w-full h-32 bg-pink-200 rounded-xl mb-4 flex items-center justify-center">
+                          <span className="text-pink-600 font-medium">Printing Technology Image</span>
+                        </div>
+                        <p className="text-sm text-pink-700 bg-pink-50 p-3 rounded-lg">
+                          Cutting-edge printing technology brings intricate designs to life with exceptional detail and color accuracy across the entire garment.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">All over Printing</h4>
-              <p className="text-sm text-gray-600">Creative design application</p>
-            </div>
 
-            {/* Quality Control */}
-            <div className="bg-gradient-to-br from-red-50 to-red-100 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-red-200">
-              <div className="w-12 h-12 bg-red-500 rounded-xl flex items-center justify-center mb-4">
-                <Shield className="h-6 w-6 text-white" />
+              {/* Quality Control */}
+              <div className="group relative bg-gradient-to-br from-red-50 to-red-100 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-red-200 overflow-hidden cursor-pointer">
+                <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="p-8 relative z-10">
+                  <div className="flex items-start gap-6">
+                    <div className="w-16 h-16 bg-red-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <Shield className="h-8 w-8 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="text-2xl font-bold text-gray-900 mb-3">Quality Control</h4>
+                      <p className="text-gray-600 mb-4">Rigorous inspection standards at every checkpoint</p>
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
+                        <div className="w-full h-32 bg-red-200 rounded-xl mb-4 flex items-center justify-center">
+                          <span className="text-red-600 font-medium">Quality Testing Image</span>
+                        </div>
+                        <p className="text-sm text-red-700 bg-red-50 p-3 rounded-lg">
+                          Multi-stage quality assessments ensure every garment meets international standards for durability, fit, and finish before approval.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Quality Control</h4>
-              <p className="text-sm text-gray-600">Rigorous inspection standards</p>
-            </div>
 
-            {/* Garment Manufacturing */}
-            <div className="bg-gradient-to-br from-indigo-50 to-indigo-100 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-indigo-200">
-              <div className="w-12 h-12 bg-indigo-500 rounded-xl flex items-center justify-center mb-4">
-                <Users className="h-6 w-6 text-white" />
+              {/* Garment Manufacturing */}
+              <div className="group relative bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-indigo-200 overflow-hidden cursor-pointer">
+                <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="p-8 relative z-10">
+                  <div className="flex items-start gap-6">
+                    <div className="w-16 h-16 bg-indigo-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <Users className="h-8 w-8 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="text-2xl font-bold text-gray-900 mb-3">Garment Manufacturing</h4>
+                      <p className="text-gray-600 mb-4">Final assembly & packaging with meticulous attention</p>
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
+                        <div className="w-full h-32 bg-indigo-200 rounded-xl mb-4 flex items-center justify-center">
+                          <span className="text-indigo-600 font-medium">Manufacturing Floor Image</span>
+                        </div>
+                        <p className="text-sm text-indigo-700 bg-indigo-50 p-3 rounded-lg">
+                          Expert craftsmen combine traditional techniques with modern efficiency to create premium garments ready for global markets.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Garment Manufacturing</h4>
-              <p className="text-sm text-gray-600">Final assembly & packaging</p>
             </div>
-
-            {/* Empty space for better grid layout on larger screens */}
-            <div className="hidden lg:block"></div>
           </div>
         </div>
 
