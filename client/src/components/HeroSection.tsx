@@ -32,49 +32,23 @@ const HeroSection = () => {
               to European markets through innovation and sustainability.
             </p>
 
-            {/* Real-time Manufacturing Video */}
-            <div className="mb-12 max-w-lg">
-              <div className="relative rounded-2xl overflow-hidden shadow-lg border border-gray-200">
+            {/* High Resolution Manufacturing Video */}
+            <div className="w-full max-w-4xl">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <video 
                   autoPlay 
                   muted 
                   loop 
                   playsInline
-                  className="w-full h-48 object-cover"
+                  className="w-full h-80 lg:h-96 object-cover"
                   src={manufacturingVideo}
                 >
                   Your browser does not support the video tag.
                 </video>
-                <div className="absolute top-3 right-3 bg-red-500 text-white text-xs px-2 py-1 rounded-full flex items-center">
-                  <div className="w-2 h-2 bg-white rounded-full mr-1 animate-pulse"></div>
-                  LIVE
+                <div className="absolute top-4 right-4 bg-red-500 text-white text-sm px-3 py-2 rounded-full flex items-center shadow-lg">
+                  <div className="w-2 h-2 bg-white rounded-full mr-2 animate-pulse"></div>
+                  LIVE PRODUCTION
                 </div>
-              </div>
-              <p className="text-sm text-gray-500 mt-2 text-center">Real-time garment manufacturing process</p>
-            </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-6">
-              <div className="text-center bg-white/70 backdrop-blur-sm rounded-2xl p-4 shadow-sm border border-gray-100">
-                <div className="flex items-center justify-center mb-2">
-                  <Award className="h-5 w-5 text-blue-500 mr-2" />
-                  <span className="text-2xl font-bold text-blue-600">15+</span>
-                </div>
-                <p className="text-xs text-gray-600">Years Innovation</p>
-              </div>
-              <div className="text-center bg-white/70 backdrop-blur-sm rounded-2xl p-4 shadow-sm border border-gray-100">
-                <div className="flex items-center justify-center mb-2">
-                  <Globe className="h-5 w-5 text-purple-500 mr-2" />
-                  <span className="text-2xl font-bold text-purple-600">25+</span>
-                </div>
-                <p className="text-xs text-gray-600">Countries Served</p>
-              </div>
-              <div className="text-center bg-white/70 backdrop-blur-sm rounded-2xl p-4 shadow-sm border border-gray-100">
-                <div className="flex items-center justify-center mb-2">
-                  <Users className="h-5 w-5 text-blue-500 mr-2" />
-                  <span className="text-2xl font-bold text-blue-600">500+</span>
-                </div>
-                <p className="text-xs text-gray-600">Expert Team</p>
               </div>
             </div>
           </div>
