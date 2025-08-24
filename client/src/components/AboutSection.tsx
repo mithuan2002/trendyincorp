@@ -543,7 +543,7 @@ const AboutSection = () => {
             {/* Header */}
             <div className="text-center mb-16">
               <h3 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                <span className="text-black font-bold">Trendy</span> <span className="text-blue-600 font-bold">Incorp</span>: pioneering textile excellence
+                About us
               </h3>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Discover our dynamic textile manufacturing expertise and commitment to quality
