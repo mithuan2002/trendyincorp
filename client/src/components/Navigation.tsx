@@ -23,7 +23,7 @@ const Navigation = () => {
               <Sparkles className="h-5 w-5 text-white" />
             </div>
             <h3 className="text-2xl font-bold">
-              <span className="text-white font-bold">Trendy</span> <span className="text-blue-600 font-bold">Incorp</span>
+              <span className="text-gray-800 font-bold">Trendy</span> <span className="text-blue-600 font-bold">Incorp</span>
             </h3>
           </div>
 
