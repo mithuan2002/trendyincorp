@@ -191,8 +191,12 @@ const AboutSection = () => {
                       <h4 className="text-2xl font-bold text-gray-900 mb-3">Cotton Selection</h4>
                       <p className="text-gray-600 mb-4">Premium quality cotton sourcing from certified organic farms</p>
                       <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
-                        <div className="w-full h-32 bg-blue-200 rounded-xl mb-4 flex items-center justify-center">
-                          <span className="text-blue-600 font-medium">Cotton Fields Image</span>
+                        <div className="w-full h-32 bg-blue-200 rounded-xl mb-4 overflow-hidden">
+                          <img 
+                            src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=400&h=200&fit=crop&crop=center" 
+                            alt="Cotton fields" 
+                            className="w-full h-full object-cover"
+                          />
                         </div>
                         <p className="text-sm text-blue-700 bg-blue-50 p-3 rounded-lg">
                           We carefully select the finest cotton fibers, ensuring each batch meets our stringent quality standards for softness, durability, and eco-friendliness.
@@ -215,8 +219,12 @@ const AboutSection = () => {
                       <h4 className="text-2xl font-bold text-gray-900 mb-3">Spinning</h4>
                       <p className="text-gray-600 mb-4">High-tech yarn production with precision engineering</p>
                       <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
-                        <div className="w-full h-32 bg-purple-200 rounded-xl mb-4 flex items-center justify-center">
-                          <span className="text-purple-600 font-medium">Spinning Machines Image</span>
+                        <div className="w-full h-32 bg-purple-200 rounded-xl mb-4 overflow-hidden">
+                          <img 
+                            src="https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=400&h=200&fit=crop&crop=center" 
+                            alt="Spinning machines" 
+                            className="w-full h-full object-cover"
+                          />
                         </div>
                         <p className="text-sm text-purple-700 bg-purple-50 p-3 rounded-lg">
                           Advanced spinning technology transforms cotton into uniform, strong yarns with consistent thickness and superior tensile strength.
@@ -239,8 +247,12 @@ const AboutSection = () => {
                       <h4 className="text-2xl font-bold text-gray-900 mb-3">Knitting</h4>
                       <p className="text-gray-600 mb-4">Advanced fabric construction with computerized precision</p>
                       <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
-                        <div className="w-full h-32 bg-green-200 rounded-xl mb-4 flex items-center justify-center">
-                          <span className="text-green-600 font-medium">Knitting Machines Image</span>
+                        <div className="w-full h-32 bg-green-200 rounded-xl mb-4 overflow-hidden">
+                          <img 
+                            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=200&fit=crop&crop=center" 
+                            alt="Knitting machines" 
+                            className="w-full h-full object-cover"
+                          />
                         </div>
                         <p className="text-sm text-green-700 bg-green-50 p-3 rounded-lg">
                           State-of-the-art knitting machines create seamless, breathable fabrics with perfect stitch consistency and optimal stretch properties.
@@ -263,8 +275,12 @@ const AboutSection = () => {
                       <h4 className="text-2xl font-bold text-gray-900 mb-3">Dyeing & Finishing</h4>
                       <p className="text-gray-600 mb-4">Color perfection & treatment with eco-friendly processes</p>
                       <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
-                        <div className="w-full h-32 bg-orange-200 rounded-xl mb-4 flex items-center justify-center">
-                          <span className="text-orange-600 font-medium">Dyeing Process Image</span>
+                        <div className="w-full h-32 bg-orange-200 rounded-xl mb-4 overflow-hidden">
+                          <img 
+                            src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=400&h=200&fit=crop&crop=center" 
+                            alt="Fabric dyeing process" 
+                            className="w-full h-full object-cover"
+                          />
                         </div>
                         <p className="text-sm text-orange-700 bg-orange-50 p-3 rounded-lg">
                           Revolutionary dyeing techniques ensure vibrant, long-lasting colors while maintaining fabric integrity and environmental compliance.
@@ -287,8 +303,12 @@ const AboutSection = () => {
                       <h4 className="text-2xl font-bold text-gray-900 mb-3">All over Printing</h4>
                       <p className="text-gray-600 mb-4">Creative design application with digital precision</p>
                       <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
-                        <div className="w-full h-32 bg-pink-200 rounded-xl mb-4 flex items-center justify-center">
-                          <span className="text-pink-600 font-medium">Printing Technology Image</span>
+                        <div className="w-full h-32 bg-pink-200 rounded-xl mb-4 overflow-hidden">
+                          <img 
+                            src="https://images.unsplash.com/photo-1567438040143-1b8bd7e77c7d?w=400&h=200&fit=crop&crop=center" 
+                            alt="Digital textile printing" 
+                            className="w-full h-full object-cover"
+                          />
                         </div>
                         <p className="text-sm text-pink-700 bg-pink-50 p-3 rounded-lg">
                           Cutting-edge printing technology brings intricate designs to life with exceptional detail and color accuracy across the entire garment.
@@ -311,8 +331,12 @@ const AboutSection = () => {
                       <h4 className="text-2xl font-bold text-gray-900 mb-3">Quality Control</h4>
                       <p className="text-gray-600 mb-4">Rigorous inspection standards at every checkpoint</p>
                       <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
-                        <div className="w-full h-32 bg-red-200 rounded-xl mb-4 flex items-center justify-center">
-                          <span className="text-red-600 font-medium">Quality Testing Image</span>
+                        <div className="w-full h-32 bg-red-200 rounded-xl mb-4 overflow-hidden">
+                          <img 
+                            src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&h=200&fit=crop&crop=center" 
+                            alt="Quality control testing" 
+                            className="w-full h-full object-cover"
+                          />
                         </div>
                         <p className="text-sm text-red-700 bg-red-50 p-3 rounded-lg">
                           Multi-stage quality assessments ensure every garment meets international standards for durability, fit, and finish before approval.
@@ -335,8 +359,12 @@ const AboutSection = () => {
                       <h4 className="text-2xl font-bold text-gray-900 mb-3">Garment Manufacturing</h4>
                       <p className="text-gray-600 mb-4">Final assembly & packaging with meticulous attention</p>
                       <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
-                        <div className="w-full h-32 bg-indigo-200 rounded-xl mb-4 flex items-center justify-center">
-                          <span className="text-indigo-600 font-medium">Manufacturing Floor Image</span>
+                        <div className="w-full h-32 bg-indigo-200 rounded-xl mb-4 overflow-hidden">
+                          <img 
+                            src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&h=200&fit=crop&crop=center" 
+                            alt="Garment manufacturing floor" 
+                            className="w-full h-full object-cover"
+                          />
                         </div>
                         <p className="text-sm text-indigo-700 bg-indigo-50 p-3 rounded-lg">
                           Expert craftsmen combine traditional techniques with modern efficiency to create premium garments ready for global markets.
