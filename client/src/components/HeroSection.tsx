@@ -1,4 +1,4 @@
-import { Globe, Award, Users, Sparkles } from "lucide-react";
+import { Globe, Award, Users } from "lucide-react";
 import heroImage from "@/assets/hero-manufacturing.jpg";
 import manufacturingVideo from "@assets/262479_tiny_1756005668046.mp4";
 
@@ -13,23 +13,18 @@ const HeroSection = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-6xl mx-auto text-center">
+        <div className="max-w-6xl mx-auto">
           {/* Hero Content */}
           <div className="animate-fade-in">
-            <div className="inline-flex items-center bg-blue-50 border border-blue-200 text-blue-700 rounded-full px-4 py-2 mb-6 shadow-sm">
-              <Sparkles className="h-4 w-4 mr-2" />
-              <span className="text-sm font-medium">Innovative Manufacturing Since 2010</span>
-            </div>
+            <p className="text-sm text-gray-500 mb-4 text-left">Full cycle production</p>
             
-            <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight text-gray-900">
-              <span className="block text-transparent bg-clip-text bg-gradient-primary">
-                Garment Export
-              </span>
+            <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight text-gray-900 text-left">
+              World-class textile production
             </h1>
             
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-lg">
-              Leading-edge garment manufacturing in Tirupur, delivering premium quality 
-              to European markets through innovation and sustainability.
+            <p className="text-lg text-gray-600 mb-8 leading-relaxed max-w-2xl text-left">
+              Explore Uztex Group, Uzbekistan's premier textile manufacturer. Merging expert craftsmanship with 
+              innovative technology, we deliver high-quality, sustainable textiles to businesses worldwide.
             </p>
 
             {/* High Resolution Manufacturing Video */}
