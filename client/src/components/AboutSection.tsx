@@ -385,31 +385,40 @@ const AboutSection = () => {
           </div>
         </div>
 
-        {/* Achievements */}
+        {/* Our Products */}
         <div className="bg-gradient-soft rounded-3xl p-12 shadow-xl border border-gray-100">
           <div className="text-center mb-12">
-            <Target className="h-12 w-12 text-blue-500 mx-auto mb-4" />
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Our Impact</h3>
+            <Factory className="h-12 w-12 text-blue-500 mx-auto mb-4" />
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">Our Products</h3>
             <p className="text-xl text-gray-600">
-              Measurable results that reflect our commitment to excellence
+              Comprehensive textile solutions for diverse market needs
             </p>
           </div>
           
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {achievements.map((achievement, index) => {
-              const IconComponent = achievement.icon;
-              return (
-                <Card key={index} className="bg-white/70 backdrop-blur-sm border-gray-200 text-center shadow-md hover:shadow-lg transition-shadow group">
-                  <CardContent className="pt-6">
-                    <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                      <IconComponent className={`h-6 w-6 ${achievement.color}`} />
-                    </div>
-                    <div className={`text-3xl font-bold ${achievement.color} mb-2`}>{achievement.value}</div>
-                    <p className="text-sm text-gray-600 font-medium">{achievement.label}</p>
-                  </CardContent>
-                </Card>
-              );
-            })}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            {[
+              "Cotton Yarn & fabrics",
+              "Custom OEM Clothing", 
+              "Promotional / Event / School Clothing",
+              "Sweater & Jacquard",
+              "Socks",
+              "Home textiles",
+              "Ready Stock"
+            ].map((product, index) => (
+              <div key={index} className="bg-white/70 backdrop-blur-sm border border-gray-200 rounded-2xl p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group">
+                <div className="flex items-center gap-4">
+                  <div className="w-3 h-3 bg-blue-500 rounded-full group-hover:scale-125 transition-transform"></div>
+                  <h4 className="text-lg font-semibold text-gray-900">{product}</h4>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Button variant="hero" size="lg" className="group shadow-lg">
+              Get Catalogue
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
           </div>
         </div>
       </div>
