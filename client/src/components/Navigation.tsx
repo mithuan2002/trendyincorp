@@ -18,14 +18,15 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <Sparkles className="h-5 w-5 text-white" />
+          <div className="flex items-center space-x-3">
+            <img 
+              src="/attached_assets/logo_1756019063723.png" 
+              alt="Trendy Incorp Logo" 
+              className="h-10 w-auto"
+            />
+            <div className="hidden md:block">
+              <p className="text-sm text-gray-600 font-medium">Major exporter to international market</p>
             </div>
-            <h1 className="text-2xl font-bold">
-              <span className="text-gray-900">Trendy</span>
-              <span className="text-blue-500"> Incorp</span>
-            </h1>
           </div>
 
           {/* Desktop Navigation */}
@@ -41,16 +42,7 @@ const Navigation = () => {
             ))}
           </nav>
 
-          {/* Contact Info & CTA */}
-          <div className="hidden md:flex items-center space-x-4">
-            <div className="flex items-center text-sm text-gray-500 bg-gray-50 rounded-full px-3 py-1">
-              <Phone className="h-4 w-4 mr-2 text-blue-500" />
-              <span>+91 9876543210</span>
-            </div>
-            <Button variant="modern" size="sm" className="shadow-md">
-              Get Quote
-            </Button>
-          </div>
+          
 
           {/* Mobile Menu Toggle */}
           <Button
@@ -77,15 +69,7 @@ const Navigation = () => {
                   {item.name}
                 </a>
               ))}
-              <div className="pt-3 border-t border-gray-100 mt-3 px-2">
-                <p className="text-sm text-gray-500 mb-3 flex items-center">
-                  <Phone className="h-4 w-4 mr-2 text-blue-500" />
-                  +91 9876543210
-                </p>
-                <Button variant="modern" size="sm" className="w-full">
-                  Get Quote
-                </Button>
-              </div>
+              
             </nav>
           </div>
         )}
