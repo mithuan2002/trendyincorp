@@ -163,6 +163,88 @@ const AboutSection = () => {
           </div>
         </div>
 
+        {/* Process Section */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center bg-green-50 border border-green-200 text-green-700 rounded-full px-4 py-2 mb-4">
+              <Factory className="h-4 w-4 mr-2" />
+              <span className="text-sm font-medium">Our Process</span>
+            </div>
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">From Cotton to Garment</h3>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Our streamlined manufacturing process ensures quality at every step
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Cotton Selection */}
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-blue-200">
+              <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center mb-4">
+                <Leaf className="h-6 w-6 text-white" />
+              </div>
+              <h4 className="text-lg font-semibold text-gray-900 mb-2">Cotton Selection</h4>
+              <p className="text-sm text-gray-600">Premium quality cotton sourcing</p>
+            </div>
+
+            {/* Spinning */}
+            <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-purple-200">
+              <div className="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center mb-4">
+                <Zap className="h-6 w-6 text-white" />
+              </div>
+              <h4 className="text-lg font-semibold text-gray-900 mb-2">Spinning</h4>
+              <p className="text-sm text-gray-600">High-tech yarn production</p>
+            </div>
+
+            {/* Knitting */}
+            <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-green-200">
+              <div className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center mb-4">
+                <Factory className="h-6 w-6 text-white" />
+              </div>
+              <h4 className="text-lg font-semibold text-gray-900 mb-2">Knitting</h4>
+              <p className="text-sm text-gray-600">Advanced fabric construction</p>
+            </div>
+
+            {/* Dyeing & Finishing */}
+            <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-orange-200">
+              <div className="w-12 h-12 bg-orange-500 rounded-xl flex items-center justify-center mb-4">
+                <Award className="h-6 w-6 text-white" />
+              </div>
+              <h4 className="text-lg font-semibold text-gray-900 mb-2">Dyeing & Finishing</h4>
+              <p className="text-sm text-gray-600">Color perfection & treatment</p>
+            </div>
+
+            {/* All over Printing */}
+            <div className="bg-gradient-to-br from-pink-50 to-pink-100 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-pink-200">
+              <div className="w-12 h-12 bg-pink-500 rounded-xl flex items-center justify-center mb-4">
+                <Lightbulb className="h-6 w-6 text-white" />
+              </div>
+              <h4 className="text-lg font-semibold text-gray-900 mb-2">All over Printing</h4>
+              <p className="text-sm text-gray-600">Creative design application</p>
+            </div>
+
+            {/* Quality Control */}
+            <div className="bg-gradient-to-br from-red-50 to-red-100 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-red-200">
+              <div className="w-12 h-12 bg-red-500 rounded-xl flex items-center justify-center mb-4">
+                <Shield className="h-6 w-6 text-white" />
+              </div>
+              <h4 className="text-lg font-semibold text-gray-900 mb-2">Quality Control</h4>
+              <p className="text-sm text-gray-600">Rigorous inspection standards</p>
+            </div>
+
+            {/* Garment Manufacturing */}
+            <div className="bg-gradient-to-br from-indigo-50 to-indigo-100 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-indigo-200">
+              <div className="w-12 h-12 bg-indigo-500 rounded-xl flex items-center justify-center mb-4">
+                <Users className="h-6 w-6 text-white" />
+              </div>
+              <h4 className="text-lg font-semibold text-gray-900 mb-2">Garment Manufacturing</h4>
+              <p className="text-sm text-gray-600">Final assembly & packaging</p>
+            </div>
+
+            {/* Empty space for better grid layout on larger screens */}
+            <div className="hidden lg:block"></div>
+          </div>
+        </div>
+
         {/* Achievements */}
         <div className="bg-gradient-soft rounded-3xl p-12 shadow-xl border border-gray-100">
           <div className="text-center mb-12">
