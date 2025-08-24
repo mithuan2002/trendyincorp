@@ -386,7 +386,7 @@ const AboutSection = () => {
         </div>
 
         {/* Our Products */}
-        <div className="bg-gradient-soft rounded-3xl p-12 shadow-xl border border-gray-100">
+        <div id="product" className="bg-gradient-soft rounded-3xl p-12 shadow-xl border border-gray-100">
           <div className="text-center mb-12">
             <Factory className="h-12 w-12 text-blue-500 mx-auto mb-4" />
             <h3 className="text-3xl font-bold text-gray-900 mb-4">Our Products</h3>
