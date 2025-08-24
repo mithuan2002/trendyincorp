@@ -18,6 +18,9 @@ import qualityGarmentsImage from "@/assets/quality-garments.jpg";
 import tirupurIndustrialImage from "@/assets/tirupur-industrial.jpg";
 import cottonSelectionImage from "@/assets/cotton-selection.jpeg";
 import spinningProcessImage from "@/assets/spinning-process.jpeg";
+import knittingProcessImage from "@/assets/knitting-process.jpeg";
+import dyeingProcessImage from "@/assets/dyeing-process.jpeg";
+import printingProcessImage from "@/assets/printing-process.jpeg";
 
 const AboutSection = () => {
   const achievements = [
@@ -251,8 +254,8 @@ const AboutSection = () => {
                       <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
                         <div className="w-full h-32 bg-green-200 rounded-xl mb-4 overflow-hidden">
                           <img 
-                            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=200&fit=crop&crop=center" 
-                            alt="Knitting machines" 
+                            src={knittingProcessImage} 
+                            alt="Knitting process machinery" 
                             className="w-full h-full object-cover"
                           />
                         </div>
@@ -279,8 +282,8 @@ const AboutSection = () => {
                       <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
                         <div className="w-full h-32 bg-orange-200 rounded-xl mb-4 overflow-hidden">
                           <img 
-                            src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=400&h=200&fit=crop&crop=center" 
-                            alt="Fabric dyeing process" 
+                            src={dyeingProcessImage} 
+                            alt="Fabric dyeing and finishing process" 
                             className="w-full h-full object-cover"
                           />
                         </div>
@@ -307,8 +310,8 @@ const AboutSection = () => {
                       <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
                         <div className="w-full h-32 bg-pink-200 rounded-xl mb-4 overflow-hidden">
                           <img 
-                            src="https://images.unsplash.com/photo-1567438040143-1b8bd7e77c7d?w=400&h=200&fit=crop&crop=center" 
-                            alt="Digital textile printing" 
+                            src={printingProcessImage} 
+                            alt="All over printing process" 
                             className="w-full h-full object-cover"
                           />
                         </div>
