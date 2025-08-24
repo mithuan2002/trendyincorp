@@ -107,7 +107,7 @@ const AboutSection = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center bg-blue-50 border border-blue-200 text-blue-700 rounded-full px-4 py-2 mb-4">
             <MapPin className="h-4 w-4 mr-2" />
-            <span className="text-sm font-medium">About <span className="text-black font-bold">Trendy</span> <span className="text-blue-600 font-bold">Incorp</span></span>
+            <span className="text-sm font-medium">About Us</span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Tirupur's Innovation Leader
@@ -159,10 +159,6 @@ const AboutSection = () => {
 
               {/* Buttons below bullet points */}
               <div className="flex flex-col sm:flex-row gap-4 mt-8">
-                <Button variant="light" size="lg" className="group shadow-lg">
-                  About Us
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </Button>
                 <Button variant="minimal" size="lg">
                   Contact Us
                 </Button>
