@@ -113,15 +113,11 @@ const AboutSection = () => {
                   <div className="w-2 h-2 bg-blue-600 rounded-full mr-4"></div>
                   Final product creation
                 </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-4"></div>
-                  About us & contact us
-                </li>
               </ul>
 
               {/* Buttons below bullet points */}
               <div className="flex flex-col sm:flex-row gap-4 mt-8">
-                <Button variant="modern" size="lg" className="group shadow-lg">
+                <Button variant="light" size="lg" className="group shadow-lg">
                   About Us
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
