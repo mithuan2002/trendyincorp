@@ -4,7 +4,7 @@ import manufacturingVideo from "@assets/262479_tiny_1756005668046.mp4";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center bg-gradient-soft overflow-hidden pt-16">
+    <section id="home" className="relative min-h-screen flex items-center bg-gradient-soft overflow-hidden pt-8">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute inset-0 bg-grid-pattern opacity-20"></div>
@@ -13,7 +13,7 @@ const HeroSection = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-6xl mx-auto text-center">
           {/* Hero Content */}
           <div className="animate-fade-in">
             <div className="inline-flex items-center bg-blue-50 border border-blue-200 text-blue-700 rounded-full px-4 py-2 mb-6 shadow-sm">
@@ -33,7 +33,7 @@ const HeroSection = () => {
             </p>
 
             {/* High Resolution Manufacturing Video */}
-            <div className="w-full max-w-4xl">
+            <div className="w-full max-w-full mx-auto">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <video 
                   autoPlay 
@@ -45,48 +45,6 @@ const HeroSection = () => {
                 >
                   Your browser does not support the video tag.
                 </video>
-                <div className="absolute top-4 right-4 bg-red-500 text-white text-sm px-3 py-2 rounded-full flex items-center shadow-lg">
-                  <div className="w-2 h-2 bg-white rounded-full mr-2 animate-pulse"></div>
-                  LIVE PRODUCTION
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Hero Visual */}
-          <div className="relative animate-scale-in" style={{ animationDelay: '0.3s' }}>
-            <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-primary opacity-20 rounded-3xl blur-2xl"></div>
-              <div className="relative bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
-                <img 
-                  src={heroImage} 
-                  alt="Modern garment manufacturing facility" 
-                  className="w-full h-64 object-cover rounded-2xl mb-6"
-                />
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-lg font-semibold text-gray-900">Smart Manufacturing</h3>
-                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                  </div>
-                  <div className="grid grid-cols-2 gap-4 text-sm">
-                    <div className="bg-blue-50 rounded-lg p-3 border border-blue-100">
-                      <div className="font-semibold text-blue-700">50,000+</div>
-                      <div className="text-blue-600">Units/Month</div>
-                    </div>
-                    <div className="bg-purple-50 rounded-lg p-3 border border-purple-100">
-                      <div className="font-semibold text-purple-700">EU Standards</div>
-                      <div className="text-purple-600">Certified</div>
-                    </div>
-                    <div className="bg-green-50 rounded-lg p-3 border border-green-100">
-                      <div className="font-semibold text-green-700">15-20 Days</div>
-                      <div className="text-green-600">Delivery</div>
-                    </div>
-                    <div className="bg-orange-50 rounded-lg p-3 border border-orange-100">
-                      <div className="font-semibold text-orange-700">24/7</div>
-                      <div className="text-orange-600">Support</div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
