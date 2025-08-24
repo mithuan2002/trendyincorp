@@ -18,14 +18,14 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-4">
             <img 
               src="/attached_assets/logo_1756019063723.png" 
               alt="Trendy Incorp Logo" 
-              className="h-10 w-auto"
+              className="h-12 w-auto object-contain"
             />
-            <div className="hidden md:block">
-              <p className="text-sm text-gray-600 font-medium">Major exporter to international market</p>
+            <div className="hidden lg:block">
+              <p className="text-sm text-gray-700 font-semibold">Major exporter to international market</p>
             </div>
           </div>
 
