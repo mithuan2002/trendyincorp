@@ -23,7 +23,7 @@ const HeroSection = () => {
             </h1>
             
             <p className="text-lg text-gray-600 mb-8 leading-relaxed max-w-2xl text-left">
-              Explore Uztex Group, Uzbekistan's premier textile manufacturer. Merging expert craftsmanship with 
+              Explore Trendy incorp, India's premier textile manufacturer. Merging expert craftsmanship with 
               innovative technology, we deliver high-quality, sustainable textiles to businesses worldwide.
             </p>
 
