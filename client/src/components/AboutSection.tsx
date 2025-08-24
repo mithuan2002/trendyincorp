@@ -118,16 +118,17 @@ const AboutSection = () => {
                   About us & contact us
                 </li>
               </ul>
-            </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="modern" size="lg" className="group shadow-lg">
-                View Certifications
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button variant="minimal" size="lg">
-                Download Profile
-              </Button>
+              {/* Buttons below bullet points */}
+              <div className="flex flex-col sm:flex-row gap-4 mt-8">
+                <Button variant="modern" size="lg" className="group shadow-lg">
+                  About Us
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+                <Button variant="minimal" size="lg">
+                  Contact Us
+                </Button>
+              </div>
             </div>
           </div>
 
