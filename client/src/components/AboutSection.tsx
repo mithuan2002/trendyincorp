@@ -21,6 +21,8 @@ import spinningProcessImage from "@/assets/spinning-process.jpeg";
 import knittingProcessImage from "@/assets/knitting-process.jpeg";
 import dyeingProcessImage from "@/assets/dyeing-process.jpeg";
 import printingProcessImage from "@/assets/printing-process.jpeg";
+import qualityControlImage from "@assets/qc_1756013275256.jpg";
+import manufacturingImage from "@assets/man_1756013281356.jpeg";
 
 const AboutSection = () => {
   const achievements = [
@@ -338,7 +340,7 @@ const AboutSection = () => {
                       <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
                         <div className="w-full h-32 bg-red-200 rounded-xl mb-4 overflow-hidden">
                           <img 
-                            src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&h=200&fit=crop&crop=center" 
+                            src={qualityControlImage} 
                             alt="Quality control testing" 
                             className="w-full h-full object-cover"
                           />
@@ -366,7 +368,7 @@ const AboutSection = () => {
                       <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
                         <div className="w-full h-32 bg-indigo-200 rounded-xl mb-4 overflow-hidden">
                           <img 
-                            src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&h=200&fit=crop&crop=center" 
+                            src={manufacturingImage} 
                             alt="Garment manufacturing floor" 
                             className="w-full h-full object-cover"
                           />
