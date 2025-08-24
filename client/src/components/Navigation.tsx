@@ -20,9 +20,10 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center space-x-4">
             <img 
-              src="/attached_assets/logo_1756019063723.png" 
+              src="/attached_assets/trendy_logo_new.png" 
               alt="Trendy Incorp Logo" 
-              className="h-12 w-auto object-contain"
+              className="h-14 w-auto object-contain bg-transparent"
+              style={{ maxWidth: '200px' }}
             />
             <div className="hidden lg:block">
               <p className="text-sm text-gray-700 font-semibold">Major exporter to international market</p>
