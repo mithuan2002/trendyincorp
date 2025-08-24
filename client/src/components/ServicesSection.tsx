@@ -124,32 +124,6 @@ const ServicesSection = () => {
           })}
         </div>
 
-        {/* Call to Action */}
-        <div className="bg-gradient-primary rounded-3xl p-12 text-white shadow-xl relative overflow-hidden">
-          {/* Background elements */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-32 translate-x-32"></div>
-          <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full blur-2xl translate-y-24 -translate-x-24"></div>
-          
-          <div className="relative z-10 text-center">
-            <Clock className="h-12 w-12 text-white mx-auto mb-6 animate-float" />
-            <h3 className="text-3xl font-bold mb-4">
-              Ready to Innovate Together?
-            </h3>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Partner with us for cutting-edge manufacturing solutions that set new industry standards. 
-              Get your personalized proposal within 24 hours.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="light" size="lg" className="group shadow-lg">
-                Request Innovation Brief
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button variant="minimal" size="lg" className="bg-white/10 text-white border-white/20 hover:bg-white/20">
-                Schedule Tech Demo
-              </Button>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

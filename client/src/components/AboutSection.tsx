@@ -421,6 +421,85 @@ const AboutSection = () => {
             </Button>
           </div>
         </div>
+
+        {/* Company Overview Section */}
+        <div className="mt-20 bg-gradient-to-br from-gray-50 to-blue-50 rounded-3xl p-16 shadow-xl border border-gray-100 relative overflow-hidden">
+          {/* Background decorative elements */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100/30 rounded-full blur-3xl -translate-y-48 translate-x-48"></div>
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-100/30 rounded-full blur-2xl translate-y-32 -translate-x-32"></div>
+          
+          <div className="relative z-10">
+            {/* Header */}
+            <div className="text-center mb-16">
+              <h3 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                Trendy Incorp: pioneering textile excellence
+              </h3>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Discover our dynamic textile manufacturing expertise and commitment to quality
+              </p>
+            </div>
+
+            {/* Metrics Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+              {/* Years in Market */}
+              <div className="text-center bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-white/50">
+                <div className="text-5xl font-bold text-blue-600 mb-2">25</div>
+                <div className="text-lg font-semibold text-gray-900 mb-1">Years</div>
+                <div className="text-sm text-gray-600">in the market</div>
+              </div>
+
+              {/* Satisfied Clients */}
+              <div className="text-center bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-white/50">
+                <div className="text-5xl font-bold text-green-600 mb-2">100+</div>
+                <div className="text-lg font-semibold text-gray-900 mb-1">Satisfied</div>
+                <div className="text-sm text-gray-600">Clients</div>
+              </div>
+
+              {/* Visited Conferences */}
+              <div className="text-center bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-white/50">
+                <div className="text-5xl font-bold text-purple-600 mb-2">50+</div>
+                <div className="text-lg font-semibold text-gray-900 mb-1">Visited</div>
+                <div className="text-sm text-gray-600">Conference</div>
+              </div>
+
+              {/* High Qualified Employees */}
+              <div className="text-center bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-white/50">
+                <div className="text-5xl font-bold text-orange-600 mb-2">200+</div>
+                <div className="text-lg font-semibold text-gray-900 mb-1">High qualified</div>
+                <div className="text-sm text-gray-600">Employees</div>
+              </div>
+            </div>
+
+            {/* Central India Map Representation */}
+            <div className="mt-16 flex justify-center">
+              <div className="relative">
+                {/* Simplified India shape using CSS */}
+                <div className="w-64 h-80 relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-200 to-blue-300 opacity-30 rounded-3xl transform rotate-12"></div>
+                  <div className="absolute top-8 left-8 w-48 h-64 bg-gradient-to-br from-blue-300 to-blue-400 opacity-40 rounded-2xl transform -rotate-6"></div>
+                  <div className="absolute top-12 left-12 w-40 h-56 bg-gradient-to-br from-blue-400 to-blue-500 opacity-50 rounded-xl"></div>
+                  
+                  {/* Location markers */}
+                  <div className="absolute top-24 left-20 w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+                  <div className="absolute top-32 left-28 w-3 h-3 bg-red-500 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+                  <div className="absolute top-40 left-24 w-3 h-3 bg-red-500 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+                </div>
+              </div>
+            </div>
+
+            {/* Partnership Call to Action */}
+            <div className="text-center mt-16">
+              <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+                Trendy Incorp's clientele consists of forward-thinking business executives who are dedicated to advancing 
+                their brands with cutting-edge technologies
+              </p>
+              <Button variant="light" size="lg" className="group shadow-lg bg-green-500 hover:bg-green-600 text-white border-0">
+                BECOME OUR PARTNER
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
