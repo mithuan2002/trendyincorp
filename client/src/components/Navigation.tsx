@@ -20,7 +20,7 @@ const Navigation = () => {
           {/* Logo - Exact replica from footer */}
           <div className="flex items-center space-x-2">
             <h3 className="text-2xl font-bold">
-              <span className="inline-flex items-center mr-2">⚡</span><span className="text-gray-800 font-bold">Trendy</span> <span className="text-blue-600 font-bold">Incorp</span>
+              <span className="inline-flex items-center mr-2">⚡</span><span className="text-black font-bold">Trendy</span> <span className="text-blue-600 font-bold">Incorp</span>
             </h3>
           </div>
 

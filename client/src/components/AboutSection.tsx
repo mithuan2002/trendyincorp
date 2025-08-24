@@ -547,7 +547,7 @@ const AboutSection = () => {
             {/* Header */}
             <div className="text-center mb-16">
               <h3 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                Trendy Incorp: pioneering textile excellence
+                <span className="text-black font-bold">Trendy</span> <span className="text-blue-600 font-bold">Incorp</span>: pioneering textile excellence
               </h3>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Discover our dynamic textile manufacturing expertise and commitment to quality
@@ -595,7 +595,7 @@ const AboutSection = () => {
             {/* Partnership Call to Action */}
             <div className="text-center mt-16">
               <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-                Trendy Incorp's clientele consists of forward-thinking business executives who are dedicated to advancing 
+                <span className="text-black font-bold">Trendy</span> <span className="text-blue-600 font-bold">Incorp's</span> clientele consists of forward-thinking business executives who are dedicated to advancing 
                 their brands with cutting-edge technologies
               </p>
               <a href="#contact">
