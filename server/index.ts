@@ -47,22 +47,9 @@ app.use((req, res, next) => {
     throw err;
   });
 
-  // importantly only setup vite in development and after
-  // setting up all the other routes so the catch-all route
-  // doesn't interfere with the other routes
-  // importantly only setup vite in development and after
-  // setting up all the other routes so the catch-all route
-  // doesn't interfere with the other routes
-  if (app.get("env") === "development") {
-    try {
-      await setupVite(app, server);
-    } catch (error) {
-      console.log("Vite setup failed, falling back to static files");
-      serveStatic(app);
-    }
-  } else {
-    serveStatic(app);
-  }
+  // Force static file serving - bypass development server
+  console.log("Serving static files from production build");
+  serveStatic(app);
 
   // ALWAYS serve the app on port 5000
   // this serves both the API and the client.
