@@ -17,29 +17,14 @@ const Navigation = () => {
     <header className="fixed top-0 w-full bg-white/95 backdrop-blur-lg z-50 border-b border-gray-100 shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <div className="flex items-center space-x-4">
-            <img 
-              src="/trendy_logo_new.png" 
-              alt="Trendy Incorp Logo" 
-              className="h-12 w-auto object-contain"
-              onError={(e) => {
-                // Fallback to text logo if image fails to load
-                e.currentTarget.style.display = 'none';
-                e.currentTarget.nextElementSibling?.classList.remove('hidden');
-              }}
-            />
-            <div className="hidden flex-col items-start">
-              <h1 className="text-2xl font-bold tracking-wider text-white">
-                TRENDY
-              </h1>
-              <h1 className="text-2xl font-bold tracking-wider text-blue-600 -mt-1">
-                INC<span className="inline-flex items-center mx-1">⚡</span>RP
-              </h1>
+          {/* Logo - Exact replica from footer */}
+          <div className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
+              <Sparkles className="h-5 w-5 text-white" />
             </div>
-            <div className="hidden lg:block">
-              <p className="text-sm text-gray-700 font-semibold">Major exporter to international market</p>
-            </div>
+            <h3 className="text-2xl font-bold">
+              <span className="text-white font-bold">Trendy</span> <span className="text-blue-600 font-bold">Incorp</span>
+            </h3>
           </div>
 
           {/* Desktop Navigation */}
