@@ -1,5 +1,6 @@
 import { Globe, Award, Users, Sparkles } from "lucide-react";
 import heroImage from "@/assets/hero-manufacturing.jpg";
+import manufacturingVideo from "@assets/262479_tiny_1756005668046.mp4";
 
 const HeroSection = () => {
   return (
@@ -40,11 +41,9 @@ const HeroSection = () => {
                   loop 
                   playsInline
                   className="w-full h-48 object-cover"
+                  src={manufacturingVideo}
                 >
-                  <source src="https://assets.codepen.io/6093409/river.mp4" type="video/mp4" />
-                  <div className="bg-gray-100 h-48 flex items-center justify-center">
-                    <p className="text-gray-500">Manufacturing process preview</p>
-                  </div>
+                  Your browser does not support the video tag.
                 </video>
                 <div className="absolute top-3 right-3 bg-red-500 text-white text-xs px-2 py-1 rounded-full flex items-center">
                   <div className="w-2 h-2 bg-white rounded-full mr-1 animate-pulse"></div>
