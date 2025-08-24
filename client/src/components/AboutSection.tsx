@@ -16,6 +16,8 @@ import {
 } from "lucide-react";
 import qualityGarmentsImage from "@/assets/quality-garments.jpg";
 import tirupurIndustrialImage from "@/assets/tirupur-industrial.jpg";
+import cottonSelectionImage from "@/assets/cotton-selection.jpeg";
+import spinningProcessImage from "@/assets/spinning-process.jpeg";
 
 const AboutSection = () => {
   const achievements = [
@@ -193,8 +195,8 @@ const AboutSection = () => {
                       <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
                         <div className="w-full h-32 bg-blue-200 rounded-xl mb-4 overflow-hidden">
                           <img 
-                            src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=400&h=200&fit=crop&crop=center" 
-                            alt="Cotton fields" 
+                            src={cottonSelectionImage} 
+                            alt="Cotton selection process" 
                             className="w-full h-full object-cover"
                           />
                         </div>
@@ -221,8 +223,8 @@ const AboutSection = () => {
                       <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
                         <div className="w-full h-32 bg-purple-200 rounded-xl mb-4 overflow-hidden">
                           <img 
-                            src="https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=400&h=200&fit=crop&crop=center" 
-                            alt="Spinning machines" 
+                            src={spinningProcessImage} 
+                            alt="Spinning process machinery" 
                             className="w-full h-full object-cover"
                           />
                         </div>
