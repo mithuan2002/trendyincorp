@@ -476,20 +476,10 @@ const AboutSection = () => {
               </div>
             </div>
 
-            {/* Central India Map Representation */}
+            {/* Factory Symbol */}
             <div className="mt-16 flex justify-center">
-              <div className="relative">
-                {/* Simplified India shape using CSS */}
-                <div className="w-64 h-80 relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-200 to-blue-300 opacity-30 rounded-3xl transform rotate-12"></div>
-                  <div className="absolute top-8 left-8 w-48 h-64 bg-gradient-to-br from-blue-300 to-blue-400 opacity-40 rounded-2xl transform -rotate-6"></div>
-                  <div className="absolute top-12 left-12 w-40 h-56 bg-gradient-to-br from-blue-400 to-blue-500 opacity-50 rounded-xl"></div>
-                  
-                  {/* Location markers */}
-                  <div className="absolute top-24 left-20 w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
-                  <div className="absolute top-32 left-28 w-3 h-3 bg-red-500 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
-                  <div className="absolute top-40 left-24 w-3 h-3 bg-red-500 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
-                </div>
+              <div className="w-32 h-32 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
+                <Factory className="h-16 w-16 text-white" />
               </div>
             </div>
 
@@ -499,10 +489,12 @@ const AboutSection = () => {
                 Trendy Incorp's clientele consists of forward-thinking business executives who are dedicated to advancing 
                 their brands with cutting-edge technologies
               </p>
-              <Button variant="light" size="lg" className="group shadow-lg bg-green-500 hover:bg-green-600 text-white border-0">
-                BECOME OUR PARTNER
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <a href="#contact">
+                <Button variant="light" size="lg" className="group shadow-lg bg-green-500 hover:bg-green-600 text-white border-0">
+                  BECOME OUR PARTNER
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </a>
             </div>
           </div>
         </div>
