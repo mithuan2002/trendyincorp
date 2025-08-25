@@ -212,275 +212,343 @@ const AboutSection = () => {
             <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
               Our streamlined manufacturing process ensures quality at every step
             </p>
-            <p className="text-sm text-gray-500 italic">Swipe through each card to explore our manufacturing journey</p>
+            <p className="text-sm text-gray-500 italic">Scroll through each card to explore our manufacturing journey</p>
           </div>
 
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {/* Cotton Selection */}
-              <div 
-                ref={(el) => (cardRefs.current[0] = el)}
-                className={`group relative rounded-3xl shadow-lg transition-all duration-500 border overflow-hidden cursor-pointer ${
-                  activeCard === 0 
-                    ? 'bg-gradient-to-br from-blue-50 to-blue-100 border-blue-200 shadow-2xl -translate-y-2' 
-                    : 'bg-gradient-to-br from-gray-50 to-gray-100 border-gray-200 hover:shadow-xl hover:-translate-y-1'
-                }`}
-              >
-                <div className={`absolute inset-0 bg-gradient-to-r from-blue-600/20 to-transparent transition-opacity duration-300 ${
-                  activeCard === 0 ? 'opacity-100' : 'opacity-0'
-                }`}></div>
-                <div className="p-8 relative z-10">
-                  <div className="flex items-start gap-6">
-                    <div className={`w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg transition-all duration-300 ${
-                      activeCard === 0 
-                        ? 'bg-blue-500 scale-110' 
-                        : 'bg-gray-400'
-                    }`}>
-                      <Leaf className="h-8 w-8 text-white" />
+            <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+              {/* Left Side - Dynamic Image Display */}
+              <div className="w-full lg:w-1/2 lg:sticky lg:top-24">
+                <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-white">
+                  {/* Default/Cotton Selection Image */}
+                  <div className={`transition-opacity duration-500 ${activeCard === 0 || activeCard === null ? 'opacity-100' : 'opacity-0 absolute inset-0'}`}>
+                    <img 
+                      src={cottonSelectionImage} 
+                      alt="Cotton selection process"
+                      className="w-full h-80 object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    <div className="absolute bottom-6 left-6 text-white">
+                      <div className="inline-flex items-center bg-blue-500 rounded-full px-3 py-1 mb-2">
+                        <Leaf className="h-4 w-4 mr-2" />
+                        <span className="text-sm font-medium">Step 1</span>
+                      </div>
+                      <h4 className="text-xl font-semibold">Cotton Selection</h4>
                     </div>
-                    <div className="flex-1">
-                      <h4 className="text-2xl font-bold text-gray-900 mb-3">Cotton Selection</h4>
-                      <p className="text-gray-600 mb-4">Premium raw material sourcing with quality assurance</p>
-                      <div className={`transition-all duration-500 ${
+                  </div>
+
+                  {/* Spinning Image */}
+                  <div className={`transition-opacity duration-500 ${activeCard === 1 ? 'opacity-100' : 'opacity-0 absolute inset-0'}`}>
+                    <img 
+                      src={spinningProcessImage} 
+                      alt="Spinning process machinery"
+                      className="w-full h-80 object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    <div className="absolute bottom-6 left-6 text-white">
+                      <div className="inline-flex items-center bg-purple-500 rounded-full px-3 py-1 mb-2">
+                        <Zap className="h-4 w-4 mr-2" />
+                        <span className="text-sm font-medium">Step 2</span>
+                      </div>
+                      <h4 className="text-xl font-semibold">Spinning</h4>
+                    </div>
+                  </div>
+
+                  {/* Knitting Image */}
+                  <div className={`transition-opacity duration-500 ${activeCard === 2 ? 'opacity-100' : 'opacity-0 absolute inset-0'}`}>
+                    <img 
+                      src={knittingProcessImage} 
+                      alt="Knitting process machinery"
+                      className="w-full h-80 object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    <div className="absolute bottom-6 left-6 text-white">
+                      <div className="inline-flex items-center bg-green-500 rounded-full px-3 py-1 mb-2">
+                        <Factory className="h-4 w-4 mr-2" />
+                        <span className="text-sm font-medium">Step 3</span>
+                      </div>
+                      <h4 className="text-xl font-semibold">Knitting</h4>
+                    </div>
+                  </div>
+
+                  {/* Dyeing Image */}
+                  <div className={`transition-opacity duration-500 ${activeCard === 3 ? 'opacity-100' : 'opacity-0 absolute inset-0'}`}>
+                    <img 
+                      src={dyeingProcessImage} 
+                      alt="Fabric dyeing and finishing process"
+                      className="w-full h-80 object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    <div className="absolute bottom-6 left-6 text-white">
+                      <div className="inline-flex items-center bg-orange-500 rounded-full px-3 py-1 mb-2">
+                        <Award className="h-4 w-4 mr-2" />
+                        <span className="text-sm font-medium">Step 4</span>
+                      </div>
+                      <h4 className="text-xl font-semibold">Dyeing & Finishing</h4>
+                    </div>
+                  </div>
+
+                  {/* Printing Image */}
+                  <div className={`transition-opacity duration-500 ${activeCard === 4 ? 'opacity-100' : 'opacity-0 absolute inset-0'}`}>
+                    <img 
+                      src={printingProcessImage} 
+                      alt="All over printing process"
+                      className="w-full h-80 object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    <div className="absolute bottom-6 left-6 text-white">
+                      <div className="inline-flex items-center bg-pink-500 rounded-full px-3 py-1 mb-2">
+                        <Lightbulb className="h-4 w-4 mr-2" />
+                        <span className="text-sm font-medium">Step 5</span>
+                      </div>
+                      <h4 className="text-xl font-semibold">All over Printing</h4>
+                    </div>
+                  </div>
+
+                  {/* Quality Control Image */}
+                  <div className={`transition-opacity duration-500 ${activeCard === 5 ? 'opacity-100' : 'opacity-0 absolute inset-0'}`}>
+                    <img 
+                      src={qualityControlImage} 
+                      alt="Quality control inspection process"
+                      className="w-full h-80 object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    <div className="absolute bottom-6 left-6 text-white">
+                      <div className="inline-flex items-center bg-teal-500 rounded-full px-3 py-1 mb-2">
+                        <Shield className="h-4 w-4 mr-2" />
+                        <span className="text-sm font-medium">Step 6</span>
+                      </div>
+                      <h4 className="text-xl font-semibold">Quality Control</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Side - Process Cards */}
+              <div className="w-full lg:w-1/2 space-y-6">
+                {/* Cotton Selection */}
+                <div 
+                  ref={(el) => (cardRefs.current[0] = el)}
+                  className={`group relative rounded-3xl shadow-lg transition-all duration-500 border overflow-hidden cursor-pointer ${
+                    activeCard === 0 
+                      ? 'bg-gradient-to-br from-blue-50 to-blue-100 border-blue-200 shadow-2xl -translate-y-2' 
+                      : 'bg-gradient-to-br from-gray-50 to-gray-100 border-gray-200 hover:shadow-xl hover:-translate-y-1'
+                  }`}
+                >
+                  <div className={`absolute inset-0 bg-gradient-to-r from-blue-600/20 to-transparent transition-opacity duration-300 ${
+                    activeCard === 0 ? 'opacity-100' : 'opacity-0'
+                  }`}></div>
+                  <div className="p-8 relative z-10">
+                    <div className="flex items-start gap-6">
+                      <div className={`w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg transition-all duration-300 ${
                         activeCard === 0 
-                          ? 'opacity-100 translate-y-0' 
-                          : 'opacity-0 translate-y-4 pointer-events-none'
+                          ? 'bg-blue-500 scale-110' 
+                          : 'bg-gray-400'
                       }`}>
-                        <div className="w-full h-32 bg-blue-200 rounded-xl mb-4 overflow-hidden">
-                          <img 
-                            src={cottonSelectionImage} 
-                            alt="Cotton selection process"
-                            className="w-full h-full object-cover"
-                          />
+                        <Leaf className="h-8 w-8 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="text-2xl font-bold text-gray-900 mb-3">Cotton Selection</h4>
+                        <p className="text-gray-600 mb-4">Premium raw material sourcing with quality assurance</p>
+                        <div className={`transition-all duration-500 ${
+                          activeCard === 0 
+                            ? 'opacity-100 translate-y-0' 
+                            : 'opacity-0 translate-y-4 pointer-events-none'
+                        }`}>
+                          <p className="text-sm text-blue-700 bg-blue-50 p-3 rounded-lg">
+                            Each batch undergoes rigorous testing for fiber strength, length, and purity ensuring only the finest materials enter our production line.
+                          </p>
                         </div>
-                        <p className="text-sm text-blue-700 bg-blue-50 p-3 rounded-lg">
-                          Each batch undergoes rigorous testing for fiber strength, length, and purity ensuring only the finest materials enter our production line.
-                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Spinning */}
-              <div 
-                ref={(el) => (cardRefs.current[1] = el)}
-                className={`group relative rounded-3xl shadow-lg transition-all duration-500 border overflow-hidden cursor-pointer ${
-                  activeCard === 1 
-                    ? 'bg-gradient-to-br from-purple-50 to-purple-100 border-purple-200 shadow-2xl -translate-y-2' 
-                    : 'bg-gradient-to-br from-gray-50 to-gray-100 border-gray-200 hover:shadow-xl hover:-translate-y-1'
-                }`}
-              >
-                <div className={`absolute inset-0 bg-gradient-to-r from-purple-600/20 to-transparent transition-opacity duration-300 ${
-                  activeCard === 1 ? 'opacity-100' : 'opacity-0'
-                }`}></div>
-                <div className="p-8 relative z-10">
-                  <div className="flex items-start gap-6">
-                    <div className={`w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg transition-all duration-300 ${
-                      activeCard === 1 
-                        ? 'bg-purple-500 scale-110' 
-                        : 'bg-gray-400'
-                    }`}>
-                      <Zap className="h-8 w-8 text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="text-2xl font-bold text-gray-900 mb-3">Spinning</h4>
-                      <p className="text-gray-600 mb-4">High-tech yarn production with precision engineering</p>
-                      <div className={`transition-all duration-500 ${
+                {/* Spinning */}
+                <div 
+                  ref={(el) => (cardRefs.current[1] = el)}
+                  className={`group relative rounded-3xl shadow-lg transition-all duration-500 border overflow-hidden cursor-pointer ${
+                    activeCard === 1 
+                      ? 'bg-gradient-to-br from-purple-50 to-purple-100 border-purple-200 shadow-2xl -translate-y-2' 
+                      : 'bg-gradient-to-br from-gray-50 to-gray-100 border-gray-200 hover:shadow-xl hover:-translate-y-1'
+                  }`}
+                >
+                  <div className={`absolute inset-0 bg-gradient-to-r from-purple-600/20 to-transparent transition-opacity duration-300 ${
+                    activeCard === 1 ? 'opacity-100' : 'opacity-0'
+                  }`}></div>
+                  <div className="p-8 relative z-10">
+                    <div className="flex items-start gap-6">
+                      <div className={`w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg transition-all duration-300 ${
                         activeCard === 1 
-                          ? 'opacity-100 translate-y-0' 
-                          : 'opacity-0 translate-y-4 pointer-events-none'
+                          ? 'bg-purple-500 scale-110' 
+                          : 'bg-gray-400'
                       }`}>
-                        <div className="w-full h-32 bg-purple-200 rounded-xl mb-4 overflow-hidden">
-                          <img 
-                            src={spinningProcessImage} 
-                            alt="Spinning process machinery"
-                            className="w-full h-full object-cover"
-                          />
+                        <Zap className="h-8 w-8 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="text-2xl font-bold text-gray-900 mb-3">Spinning</h4>
+                        <p className="text-gray-600 mb-4">High-tech yarn production with precision engineering</p>
+                        <div className={`transition-all duration-500 ${
+                          activeCard === 1 
+                            ? 'opacity-100 translate-y-0' 
+                            : 'opacity-0 translate-y-4 pointer-events-none'
+                        }`}>
+                          <p className="text-sm text-purple-700 bg-purple-50 p-3 rounded-lg">
+                            State-of-the-art ring spinning technology creates uniform, high-strength yarns with consistent quality across every production batch.
+                          </p>
                         </div>
-                        <p className="text-sm text-purple-700 bg-purple-50 p-3 rounded-lg">
-                          State-of-the-art ring spinning technology creates uniform, high-strength yarns with consistent quality across every production batch.
-                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Knitting */}
-              <div 
-                ref={(el) => (cardRefs.current[2] = el)}
-                className={`group relative rounded-3xl shadow-lg transition-all duration-500 border overflow-hidden cursor-pointer ${
-                  activeCard === 2 
-                    ? 'bg-gradient-to-br from-green-50 to-green-100 border-green-200 shadow-2xl -translate-y-2' 
-                    : 'bg-gradient-to-br from-gray-50 to-gray-100 border-gray-200 hover:shadow-xl hover:-translate-y-1'
-                }`}
-              >
-                <div className={`absolute inset-0 bg-gradient-to-r from-green-600/20 to-transparent transition-opacity duration-300 ${
-                  activeCard === 2 ? 'opacity-100' : 'opacity-0'
-                }`}></div>
-                <div className="p-8 relative z-10">
-                  <div className="flex items-start gap-6">
-                    <div className={`w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg transition-all duration-300 ${
-                      activeCard === 2 
-                        ? 'bg-green-500 scale-110' 
-                        : 'bg-gray-400'
-                    }`}>
-                      <Factory className="h-8 w-8 text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="text-2xl font-bold text-gray-900 mb-3">Knitting</h4>
-                      <p className="text-gray-600 mb-4">Advanced fabric construction with computerized precision</p>
-                      <div className={`transition-all duration-500 ${
+                {/* Knitting */}
+                <div 
+                  ref={(el) => (cardRefs.current[2] = el)}
+                  className={`group relative rounded-3xl shadow-lg transition-all duration-500 border overflow-hidden cursor-pointer ${
+                    activeCard === 2 
+                      ? 'bg-gradient-to-br from-green-50 to-green-100 border-green-200 shadow-2xl -translate-y-2' 
+                      : 'bg-gradient-to-br from-gray-50 to-gray-100 border-gray-200 hover:shadow-xl hover:-translate-y-1'
+                  }`}
+                >
+                  <div className={`absolute inset-0 bg-gradient-to-r from-green-600/20 to-transparent transition-opacity duration-300 ${
+                    activeCard === 2 ? 'opacity-100' : 'opacity-0'
+                  }`}></div>
+                  <div className="p-8 relative z-10">
+                    <div className="flex items-start gap-6">
+                      <div className={`w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg transition-all duration-300 ${
                         activeCard === 2 
-                          ? 'opacity-100 translate-y-0' 
-                          : 'opacity-0 translate-y-4 pointer-events-none'
+                          ? 'bg-green-500 scale-110' 
+                          : 'bg-gray-400'
                       }`}>
-                        <div className="w-full h-32 bg-green-200 rounded-xl mb-4 overflow-hidden">
-                          <img 
-                            src={knittingProcessImage} 
-                            alt="Knitting process machinery"
-                            className="w-full h-full object-cover"
-                          />
+                        <Factory className="h-8 w-8 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="text-2xl font-bold text-gray-900 mb-3">Knitting</h4>
+                        <p className="text-gray-600 mb-4">Advanced fabric construction with computerized precision</p>
+                        <div className={`transition-all duration-500 ${
+                          activeCard === 2 
+                            ? 'opacity-100 translate-y-0' 
+                            : 'opacity-0 translate-y-4 pointer-events-none'
+                        }`}>
+                          <p className="text-sm text-green-700 bg-green-50 p-3 rounded-lg">
+                            Computer-controlled circular knitting machines create complex fabric structures with exceptional dimensional stability and comfort.
+                          </p>
                         </div>
-                        <p className="text-sm text-green-700 bg-green-50 p-3 rounded-lg">
-                          Computer-controlled circular knitting machines create complex fabric structures with exceptional dimensional stability and comfort.
-                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Dyeing & Finishing */}
-              <div 
-                ref={(el) => (cardRefs.current[3] = el)}
-                className={`group relative rounded-3xl shadow-lg transition-all duration-500 border overflow-hidden cursor-pointer ${
-                  activeCard === 3 
-                    ? 'bg-gradient-to-br from-orange-50 to-orange-100 border-orange-200 shadow-2xl -translate-y-2' 
-                    : 'bg-gradient-to-br from-gray-50 to-gray-100 border-gray-200 hover:shadow-xl hover:-translate-y-1'
-                }`}
-              >
-                <div className={`absolute inset-0 bg-gradient-to-r from-orange-600/20 to-transparent transition-opacity duration-300 ${
-                  activeCard === 3 ? 'opacity-100' : 'opacity-0'
-                }`}></div>
-                <div className="p-8 relative z-10">
-                  <div className="flex items-start gap-6">
-                    <div className={`w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg transition-all duration-300 ${
-                      activeCard === 3 
-                        ? 'bg-orange-500 scale-110' 
-                        : 'bg-gray-400'
-                    }`}>
-                      <Award className="h-8 w-8 text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="text-2xl font-bold text-gray-900 mb-3">Dyeing & Finishing</h4>
-                      <p className="text-gray-600 mb-4">Color perfection & treatment with eco-friendly processes</p>
-                      <div className={`transition-all duration-500 ${
+                {/* Dyeing & Finishing */}
+                <div 
+                  ref={(el) => (cardRefs.current[3] = el)}
+                  className={`group relative rounded-3xl shadow-lg transition-all duration-500 border overflow-hidden cursor-pointer ${
+                    activeCard === 3 
+                      ? 'bg-gradient-to-br from-orange-50 to-orange-100 border-orange-200 shadow-2xl -translate-y-2' 
+                      : 'bg-gradient-to-br from-gray-50 to-gray-100 border-gray-200 hover:shadow-xl hover:-translate-y-1'
+                  }`}
+                >
+                  <div className={`absolute inset-0 bg-gradient-to-r from-orange-600/20 to-transparent transition-opacity duration-300 ${
+                    activeCard === 3 ? 'opacity-100' : 'opacity-0'
+                  }`}></div>
+                  <div className="p-8 relative z-10">
+                    <div className="flex items-start gap-6">
+                      <div className={`w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg transition-all duration-300 ${
                         activeCard === 3 
-                          ? 'opacity-100 translate-y-0' 
-                          : 'opacity-0 translate-y-4 pointer-events-none'
+                          ? 'bg-orange-500 scale-110' 
+                          : 'bg-gray-400'
                       }`}>
-                        <div className="w-full h-32 bg-orange-200 rounded-xl mb-4 overflow-hidden">
-                          <img 
-                            src={dyeingProcessImage} 
-                            alt="Fabric dyeing and finishing process"
-                            className="w-full h-full object-cover"
-                          />
+                        <Award className="h-8 w-8 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="text-2xl font-bold text-gray-900 mb-3">Dyeing & Finishing</h4>
+                        <p className="text-gray-600 mb-4">Color perfection & treatment with eco-friendly processes</p>
+                        <div className={`transition-all duration-500 ${
+                          activeCard === 3 
+                            ? 'opacity-100 translate-y-0' 
+                            : 'opacity-0 translate-y-4 pointer-events-none'
+                        }`}>
+                          <p className="text-sm text-orange-700 bg-orange-50 p-3 rounded-lg">
+                            Revolutionary dyeing techniques ensure vibrant, long-lasting colors while maintaining fabric integrity and environmental compliance.
+                          </p>
                         </div>
-                        <p className="text-sm text-orange-700 bg-orange-50 p-3 rounded-lg">
-                          Revolutionary dyeing techniques ensure vibrant, long-lasting colors while maintaining fabric integrity and environmental compliance.
-                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              {/* All over Printing */}
-              <div 
-                ref={(el) => (cardRefs.current[4] = el)}
-                className={`group relative rounded-3xl shadow-lg transition-all duration-500 border overflow-hidden cursor-pointer ${
-                  activeCard === 4 
-                    ? 'bg-gradient-to-br from-pink-50 to-pink-100 border-pink-200 shadow-2xl -translate-y-2' 
-                    : 'bg-gradient-to-br from-gray-50 to-gray-100 border-gray-200 hover:shadow-xl hover:-translate-y-1'
-                }`}
-              >
-                <div className={`absolute inset-0 bg-gradient-to-r from-pink-600/20 to-transparent transition-opacity duration-300 ${
-                  activeCard === 4 ? 'opacity-100' : 'opacity-0'
-                }`}></div>
-                <div className="p-8 relative z-10">
-                  <div className="flex items-start gap-6">
-                    <div className={`w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg transition-all duration-300 ${
-                      activeCard === 4 
-                        ? 'bg-pink-500 scale-110' 
-                        : 'bg-gray-400'
-                    }`}>
-                      <Lightbulb className="h-8 w-8 text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="text-2xl font-bold text-gray-900 mb-3">All over Printing</h4>
-                      <p className="text-gray-600 mb-4">Creative design application with digital precision</p>
-                      <div className={`transition-all duration-500 ${
+                {/* All over Printing */}
+                <div 
+                  ref={(el) => (cardRefs.current[4] = el)}
+                  className={`group relative rounded-3xl shadow-lg transition-all duration-500 border overflow-hidden cursor-pointer ${
+                    activeCard === 4 
+                      ? 'bg-gradient-to-br from-pink-50 to-pink-100 border-pink-200 shadow-2xl -translate-y-2' 
+                      : 'bg-gradient-to-br from-gray-50 to-gray-100 border-gray-200 hover:shadow-xl hover:-translate-y-1'
+                  }`}
+                >
+                  <div className={`absolute inset-0 bg-gradient-to-r from-pink-600/20 to-transparent transition-opacity duration-300 ${
+                    activeCard === 4 ? 'opacity-100' : 'opacity-0'
+                  }`}></div>
+                  <div className="p-8 relative z-10">
+                    <div className="flex items-start gap-6">
+                      <div className={`w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg transition-all duration-300 ${
                         activeCard === 4 
-                          ? 'opacity-100 translate-y-0' 
-                          : 'opacity-0 translate-y-4 pointer-events-none'
+                          ? 'bg-pink-500 scale-110' 
+                          : 'bg-gray-400'
                       }`}>
-                        <div className="w-full h-32 bg-pink-200 rounded-xl mb-4 overflow-hidden">
-                          <img 
-                            src={printingProcessImage} 
-                            alt="All over printing process"
-                            className="w-full h-full object-cover"
-                          />
+                        <Lightbulb className="h-8 w-8 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="text-2xl font-bold text-gray-900 mb-3">All over Printing</h4>
+                        <p className="text-gray-600 mb-4">Creative design application with digital precision</p>
+                        <div className={`transition-all duration-500 ${
+                          activeCard === 4 
+                            ? 'opacity-100 translate-y-0' 
+                            : 'opacity-0 translate-y-4 pointer-events-none'
+                        }`}>
+                          <p className="text-sm text-pink-700 bg-pink-50 p-3 rounded-lg">
+                            Digital printing technology enables complex, multi-color designs with perfect registration and exceptional wash fastness.
+                          </p>
                         </div>
-                        <p className="text-sm text-pink-700 bg-pink-50 p-3 rounded-lg">
-                          Digital printing technology enables complex, multi-color designs with perfect registration and exceptional wash fastness.
-                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Quality Control */}
-              <div 
-                ref={(el) => (cardRefs.current[5] = el)}
-                className={`group relative rounded-3xl shadow-lg transition-all duration-500 border overflow-hidden cursor-pointer ${
-                  activeCard === 5 
-                    ? 'bg-gradient-to-br from-teal-50 to-teal-100 border-teal-200 shadow-2xl -translate-y-2' 
-                    : 'bg-gradient-to-br from-gray-50 to-gray-100 border-gray-200 hover:shadow-xl hover:-translate-y-1'
-                }`}
-              >
-                <div className={`absolute inset-0 bg-gradient-to-r from-teal-600/20 to-transparent transition-opacity duration-300 ${
-                  activeCard === 5 ? 'opacity-100' : 'opacity-0'
-                }`}></div>
-                <div className="p-8 relative z-10">
-                  <div className="flex items-start gap-6">
-                    <div className={`w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg transition-all duration-300 ${
-                      activeCard === 5 
-                        ? 'bg-teal-500 scale-110' 
-                        : 'bg-gray-400'
-                    }`}>
-                      <Shield className="h-8 w-8 text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="text-2xl font-bold text-gray-900 mb-3">Quality Control</h4>
-                      <p className="text-gray-600 mb-4">Multi-point inspection ensuring European standards</p>
-                      <div className={`transition-all duration-500 ${
+                {/* Quality Control */}
+                <div 
+                  ref={(el) => (cardRefs.current[5] = el)}
+                  className={`group relative rounded-3xl shadow-lg transition-all duration-500 border overflow-hidden cursor-pointer ${
+                    activeCard === 5 
+                      ? 'bg-gradient-to-br from-teal-50 to-teal-100 border-teal-200 shadow-2xl -translate-y-2' 
+                      : 'bg-gradient-to-br from-gray-50 to-gray-100 border-gray-200 hover:shadow-xl hover:-translate-y-1'
+                  }`}
+                >
+                  <div className={`absolute inset-0 bg-gradient-to-r from-teal-600/20 to-transparent transition-opacity duration-300 ${
+                    activeCard === 5 ? 'opacity-100' : 'opacity-0'
+                  }`}></div>
+                  <div className="p-8 relative z-10">
+                    <div className="flex items-start gap-6">
+                      <div className={`w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg transition-all duration-300 ${
                         activeCard === 5 
-                          ? 'opacity-100 translate-y-0' 
-                          : 'opacity-0 translate-y-4 pointer-events-none'
+                          ? 'bg-teal-500 scale-110' 
+                          : 'bg-gray-400'
                       }`}>
-                        <div className="w-full h-32 bg-teal-200 rounded-xl mb-4 overflow-hidden">
-                          <img 
-                            src={qualityControlImage} 
-                            alt="Quality control inspection process"
-                            className="w-full h-full object-cover"
-                          />
+                        <Shield className="h-8 w-8 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="text-2xl font-bold text-gray-900 mb-3">Quality Control</h4>
+                        <p className="text-gray-600 mb-4">Multi-point inspection ensuring European standards</p>
+                        <div className={`transition-all duration-500 ${
+                          activeCard === 5 
+                            ? 'opacity-100 translate-y-0' 
+                            : 'opacity-0 translate-y-4 pointer-events-none'
+                        }`}>
+                          <p className="text-sm text-teal-700 bg-teal-50 p-3 rounded-lg">
+                            Comprehensive quality audits at every stage ensure adherence to international standards and customer specifications.
+                          </p>
                         </div>
-                        <p className="text-sm text-teal-700 bg-teal-50 p-3 rounded-lg">
-                          Comprehensive quality audits at every stage ensure adherence to international standards and customer specifications.
-                        </p>
                       </div>
                     </div>
                   </div>
