@@ -159,7 +159,7 @@ const AboutSection = () => {
 
               {/* Buttons below bullet points */}
               <div className="flex flex-col sm:flex-row gap-4 mt-8">
-                <Button variant="minimal" size="lg">
+                <Button className="bg-blue-600 hover:bg-blue-700 text-white" size="lg">
                   Contact Us
                 </Button>
               </div>
@@ -181,21 +181,6 @@ const AboutSection = () => {
                   <span className="text-sm font-medium">Premium Quality</span>
                 </div>
                 <h4 className="text-lg font-semibold">European Standards</h4>
-              </div>
-            </div>
-            <div className="relative group">
-              <img 
-                src={tirupurIndustrialImage} 
-                alt="Tirupur textile industrial landscape" 
-                className="w-full h-48 object-cover rounded-2xl shadow-lg group-hover:shadow-xl transition-shadow"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-2xl"></div>
-              <div className="absolute bottom-4 left-6 text-white">
-                <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 mb-2">
-                  <MapPin className="h-4 w-4 mr-2" />
-                  <span className="text-sm font-medium">Strategic Location</span>
-                </div>
-                <h4 className="text-lg font-semibold">Tirupur Hub</h4>
               </div>
             </div>
           </div>
