@@ -1,8 +1,21 @@
 import { Globe, Award, Users } from "lucide-react";
+import { useState, useEffect } from "react";
 import heroImage from "@/assets/hero-manufacturing.jpg";
-import manufacturingVideo from "@assets/262479_tiny_1756005668046.mp4";
+import factoryImage1 from "@assets/p1_1756171550573.jpg";
+import factoryImage2 from "@assets/p2_1756171539781.jpg";
 
 const HeroSection = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const images = [factoryImage1, factoryImage2];
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 1000); // Change image every 1 second
+    
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   return (
     <section id="home" className="relative min-h-screen flex items-center bg-gradient-soft overflow-hidden pt-8">
       {/* Background Pattern */}
@@ -27,19 +40,15 @@ const HeroSection = () => {
               innovative technology, we deliver high-quality, sustainable textiles to businesses worldwide.
             </p>
 
-            {/* High Resolution Manufacturing Video */}
+            {/* Automatic Image Slideshow */}
             <div className="w-full max-w-full mx-auto">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                <video 
-                  autoPlay 
-                  muted 
-                  loop 
-                  playsInline
-                  className="w-full h-80 lg:h-96 object-cover"
-                  src={manufacturingVideo}
-                >
-                  Your browser does not support the video tag.
-                </video>
+                <img 
+                  src={images[currentImageIndex]}
+                  alt={`Factory operations ${currentImageIndex + 1}`}
+                  className="w-full h-80 lg:h-96 object-cover transition-opacity duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
               </div>
             </div>
           </div>
