@@ -1,22 +1,8 @@
 import { Globe, Award, Users } from "lucide-react";
-import { useState, useEffect } from "react";
 import heroImage from "@/assets/hero-manufacturing.jpg";
-import factoryImage1 from "@/assets/factory-image1.jpg";
-import factoryImage2 from "@/assets/factory-image2.jpg";
-import factoryImage3 from "@/assets/factory-image3.jpeg";
+import manufacturingVideo from "@assets/262479_tiny_1756005668046.mp4";
 
 const HeroSection = () => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const images = [factoryImage1, factoryImage2, factoryImage3];
-  
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 1200); // Change image every 1.2 seconds (3.6 seconds total for 3 images)
-    
-    return () => clearInterval(interval);
-  }, [images.length]);
-
   return (
     <section id="home" className="relative min-h-screen flex items-center bg-gradient-soft overflow-hidden pt-8">
       {/* Background Pattern */}
@@ -41,24 +27,19 @@ const HeroSection = () => {
               innovative technology, we deliver high-quality, sustainable textiles to businesses worldwide.
             </p>
 
-            {/* Automatic Image Slideshow */}
+            {/* High Resolution Manufacturing Video */}
             <div className="w-full max-w-full mx-auto">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-gray-200">
-                {images.map((image, index) => (
-                  <img 
-                    key={index}
-                    src={image}
-                    alt={`Factory operations ${index + 1}`}
-                    className={`w-full h-80 lg:h-96 object-cover absolute inset-0 transition-opacity duration-500 ${
-                      index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-                    }`}
-                    onError={(e) => {
-                      // Fallback to a placeholder if image fails to load
-                      e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+CiAgPHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkZhY3RvcnkgSW1hZ2UgJHtpbmRleCArIDF9PC90ZXh0Pgo8L3N2Zz4=';
-                    }}
-                  />
-                ))}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                <video 
+                  autoPlay 
+                  muted 
+                  loop 
+                  playsInline
+                  className="w-full h-80 lg:h-96 object-cover"
+                  src={manufacturingVideo}
+                >
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </div>
           </div>
