@@ -1,5 +1,6 @@
 import { Globe, Award, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import floatingTextileImage from "@/assets/floating-textile.jpeg";
 
 const HeroSection = () => {
   return (
@@ -26,18 +27,18 @@ const HeroSection = () => {
               innovative technology, we deliver high-quality, sustainable textiles to businesses worldwide.
             </p>
 
-            {/* Call to Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md">
-              <a href="#about">
-                <Button size="lg" className="w-full sm:w-auto shadow-lg bg-blue-600 hover:bg-blue-700 text-white">
-                  Learn More
-                </Button>
-              </a>
-              <a href="#contact">
-                <Button variant="outline" size="lg" className="w-full sm:w-auto shadow-lg border-2 border-blue-600 text-blue-600 hover:bg-blue-50">
-                  Contact Us
-                </Button>
-              </a>
+            {/* Floating Textile Image */}
+            <div className="relative mt-8">
+              <div className="w-96 h-64 relative animate-float">
+                <img 
+                  src={floatingTextileImage}
+                  alt="Premium textile manufacturing"
+                  className="w-full h-full object-cover rounded-3xl shadow-2xl transform hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent rounded-3xl"></div>
+                <div className="absolute -top-4 -right-4 w-8 h-8 bg-blue-500 rounded-full animate-pulse shadow-lg"></div>
+                <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-green-500 rounded-full animate-bounce shadow-lg"></div>
+              </div>
             </div>
           </div>
         </div>
