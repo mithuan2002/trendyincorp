@@ -43,7 +43,7 @@ const HeroSection = () => {
 
             {/* Automatic Image Slideshow */}
             <div className="w-full max-w-full mx-auto">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-gray-200">
                 {images.map((image, index) => (
                   <img 
                     key={index}
@@ -52,6 +52,10 @@ const HeroSection = () => {
                     className={`w-full h-80 lg:h-96 object-cover absolute inset-0 transition-opacity duration-500 ${
                       index === currentImageIndex ? 'opacity-100' : 'opacity-0'
                     }`}
+                    onError={(e) => {
+                      // Fallback to a placeholder if image fails to load
+                      e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+CiAgPHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkZhY3RvcnkgSW1hZ2UgJHtpbmRleCArIDF9PC90ZXh0Pgo8L3N2Zz4=';
+                    }}
                   />
                 ))}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
