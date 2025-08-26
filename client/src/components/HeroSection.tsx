@@ -1,9 +1,9 @@
 import { Globe, Award, Users } from "lucide-react";
 import { useState, useEffect } from "react";
 import heroImage from "@/assets/hero-manufacturing.jpg";
-import factoryImage1 from "@assets/p1_1756171550573.jpg";
-import factoryImage2 from "@assets/p2_1756171539781.jpg";
-import factoryImage3 from "@assets/p3_1756171530475.jpeg";
+import factoryImage1 from "@/assets/factory-image1.jpg";
+import factoryImage2 from "@/assets/factory-image2.jpg";
+import factoryImage3 from "@/assets/factory-image3.jpeg";
 
 const HeroSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
