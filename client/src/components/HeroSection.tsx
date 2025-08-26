@@ -29,7 +29,7 @@ const HeroSection = () => {
 
             {/* Floating Textile Image */}
             <div className="relative mt-8">
-              <div className="w-96 h-64 relative animate-float">
+              <div className="w-full h-64 relative animate-float">
                 <img 
                   src={floatingTextileImage}
                   alt="Premium textile manufacturing"
