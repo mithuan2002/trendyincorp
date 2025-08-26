@@ -1,8 +1,21 @@
 import { Globe, Award, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import floatingTextileImage from "@assets/p3_1756172693522.jpeg";
+import { useState, useEffect } from "react";
+import image1 from "@assets/p3_1756172693522.jpeg";
+import image2 from "@assets/p2_1756172992913.jpg";
 
 const HeroSection = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const images = [image1, image2];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   return (
     <section id="home" className="relative min-h-screen flex items-center bg-gradient-soft overflow-hidden pt-8">
       {/* Background Pattern */}
@@ -31,9 +44,9 @@ const HeroSection = () => {
             <div className="relative mt-8">
               <div className="w-full h-96 relative animate-float">
                 <img 
-                  src={floatingTextileImage}
+                  src={images[currentImageIndex]}
                   alt="Premium textile manufacturing"
-                  className="w-full h-full object-contain rounded-3xl shadow-2xl transform hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-contain rounded-3xl shadow-2xl transform hover:scale-105 transition-all duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent rounded-3xl"></div>
                 <div className="absolute -top-4 -right-4 w-8 h-8 bg-blue-500 rounded-full animate-pulse shadow-lg"></div>
