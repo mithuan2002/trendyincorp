@@ -29,11 +29,11 @@ const HeroSection = () => {
 
             {/* Floating Textile Image */}
             <div className="relative mt-8">
-              <div className="w-full h-64 relative animate-float">
+              <div className="w-full h-96 relative animate-float">
                 <img 
                   src={floatingTextileImage}
                   alt="Premium textile manufacturing"
-                  className="w-full h-full object-cover rounded-3xl shadow-2xl transform hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-contain rounded-3xl shadow-2xl transform hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent rounded-3xl"></div>
                 <div className="absolute -top-4 -right-4 w-8 h-8 bg-blue-500 rounded-full animate-pulse shadow-lg"></div>
