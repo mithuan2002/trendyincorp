@@ -3,15 +3,16 @@ import { useState, useEffect } from "react";
 import heroImage from "@/assets/hero-manufacturing.jpg";
 import factoryImage1 from "@assets/p1_1756171550573.jpg";
 import factoryImage2 from "@assets/p2_1756171539781.jpg";
+import factoryImage3 from "@assets/p3_1756171530475.jpeg";
 
 const HeroSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const images = [factoryImage1, factoryImage2];
+  const images = [factoryImage1, factoryImage2, factoryImage3];
   
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 1000); // Change image every 1 second
+    }, 1200); // Change image every 1.2 seconds (3.6 seconds total for 3 images)
     
     return () => clearInterval(interval);
   }, [images.length]);
@@ -43,11 +44,16 @@ const HeroSection = () => {
             {/* Automatic Image Slideshow */}
             <div className="w-full max-w-full mx-auto">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                <img 
-                  src={images[currentImageIndex]}
-                  alt={`Factory operations ${currentImageIndex + 1}`}
-                  className="w-full h-80 lg:h-96 object-cover transition-opacity duration-300"
-                />
+                {images.map((image, index) => (
+                  <img 
+                    key={index}
+                    src={image}
+                    alt={`Factory operations ${index + 1}`}
+                    className={`w-full h-80 lg:h-96 object-cover absolute inset-0 transition-opacity duration-500 ${
+                      index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+                    }`}
+                  />
+                ))}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
               </div>
             </div>
