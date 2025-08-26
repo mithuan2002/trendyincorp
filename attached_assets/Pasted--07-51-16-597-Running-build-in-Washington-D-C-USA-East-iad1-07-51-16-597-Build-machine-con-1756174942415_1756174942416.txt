@@ -1,0 +1,54 @@
+[07:51:16.597] Running build in Washington, D.C., USA (East) – iad1
+[07:51:16.597] Build machine configuration: 2 cores, 8 GB
+[07:51:16.613] Cloning github.com/mithuan2002/trendyincorp (Branch: main, Commit: cb27168)
+[07:51:16.621] Skipping build cache, deployment was triggered without cache.
+[07:51:17.207] Cloning completed: 593.000ms
+[07:51:17.262] Found .vercelignore
+[07:51:17.265] Removed 1 ignored files defined in .vercelignore
+[07:51:17.265]   /.replit
+[07:51:17.552] Running "vercel build"
+[07:51:17.957] Vercel CLI 46.0.2
+[07:51:18.557] Installing dependencies...
+[07:51:23.302] npm warn deprecated @esbuild-kit/esm-loader@2.6.5: Merged into tsx: https://tsx.is
+[07:51:23.368] npm warn deprecated @esbuild-kit/core-utils@3.3.2: Merged into tsx: https://tsx.is
+[07:51:28.524] 
+[07:51:28.525] added 489 packages in 10s
+[07:51:28.526] 
+[07:51:28.527] 64 packages are looking for funding
+[07:51:28.528]   run `npm fund` for details
+[07:51:28.706] 
+[07:51:28.706] > rest-express@1.0.0 build
+[07:51:28.707] > vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+[07:51:28.707] 
+[07:51:28.966] [36mvite v5.4.14 [32mbuilding for production...[36m[39m
+[07:51:29.015] transforming...
+[07:51:29.269] Browserslist: browsers data (caniuse-lite) is 10 months old. Please run:
+[07:51:29.270]   npx update-browserslist-db@latest
+[07:51:29.270]   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[07:51:33.522] [32m✓[39m 1679 modules transformed.
+[07:51:33.793] rendering chunks...
+[07:51:33.807] computing gzip size...
+[07:51:33.823] [2m../dist/public/[22m[32mindex.html                                     [39m[1m[2m    0.63 kB[22m[1m[22m[2m │ gzip:   0.38 kB[22m
+[07:51:33.824] [2m../dist/public/[22m[2massets/[22m[32mprinting-process-BnGjkzpm.jpeg          [39m[1m[2m    8.74 kB[22m[1m[22m
+[07:51:33.824] [2m../dist/public/[22m[2massets/[22m[32mdyeing-process-D_wzroY1.jpeg            [39m[1m[2m   11.73 kB[22m[1m[22m
+[07:51:33.825] [2m../dist/public/[22m[2massets/[22m[32mspinning-process-CSZOpwBX.jpeg          [39m[1m[2m   13.03 kB[22m[1m[22m
+[07:51:33.825] [2m../dist/public/[22m[2massets/[22m[32mknitting-process-D4MCtp8j.jpeg          [39m[1m[2m   16.36 kB[22m[1m[22m
+[07:51:33.825] [2m../dist/public/[22m[2massets/[22m[32mquality-garments-BZPK0uyU.jpg           [39m[1m[2m   54.84 kB[22m[1m[22m
+[07:51:33.826] [2m../dist/public/[22m[2massets/[22m[32mtirupur-industrial-Cce046gK.jpg         [39m[1m[2m  100.28 kB[22m[1m[22m
+[07:51:33.826] [2m../dist/public/[22m[2massets/[22m[32mcotton-selection-BN3o0j34.jpeg          [39m[1m[2m  246.36 kB[22m[1m[22m
+[07:51:33.827] [2m../dist/public/[22m[2massets/[22m[32mqc_1756013275256-CvuIjDbI.jpg           [39m[1m[2m  373.77 kB[22m[1m[22m
+[07:51:33.827] [2m../dist/public/[22m[2massets/[22m[32m262479_tiny_1756005668046-Dk-ca4mt.mp4  [39m[1m[2m2,147.86 kB[22m[1m[22m
+[07:51:33.828] [2m../dist/public/[22m[2massets/[22m[35mindex-C0tqQvFe.css                      [39m[1m[2m   84.06 kB[22m[1m[22m[2m │ gzip:  13.41 kB[22m
+[07:51:33.828] [2m../dist/public/[22m[2massets/[22m[36mindex-TFsV5nBY.js                       [39m[1m[2m  368.99 kB[22m[1m[22m[2m │ gzip: 113.72 kB[22m
+[07:51:33.828] [32m✓ built in 4.83s[39m
+[07:51:33.858] 
+[07:51:33.861]   dist/index.js  3.3kb
+[07:51:33.862] 
+[07:51:33.862] ⚡ Done in 4ms
+[07:51:33.944] Build Completed in /vercel/output [15s]
+[07:51:34.052] Deploying outputs...
+[07:51:36.198] Deployment completed
+[07:51:37.085] Creating build cache...
+[07:51:50.571] Created build cache: 13.478s
+[07:51:50.571] Uploading build cache [85.68 MB]
+[07:51:51.894] Build cache uploaded: 1.329s
