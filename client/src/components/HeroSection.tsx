@@ -1,6 +1,5 @@
 import { Globe, Award, Users } from "lucide-react";
-import heroImage from "@/assets/hero-manufacturing.jpg";
-import manufacturingVideo from "@assets/262479_tiny_1756005668046.mp4";
+import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
@@ -27,20 +26,18 @@ const HeroSection = () => {
               innovative technology, we deliver high-quality, sustainable textiles to businesses worldwide.
             </p>
 
-            {/* High Resolution Manufacturing Video */}
-            <div className="w-full max-w-full mx-auto">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                <video 
-                  autoPlay 
-                  muted 
-                  loop 
-                  playsInline
-                  className="w-full h-80 lg:h-96 object-cover"
-                  src={manufacturingVideo}
-                >
-                  Your browser does not support the video tag.
-                </video>
-              </div>
+            {/* Call to Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 max-w-md">
+              <a href="#about">
+                <Button size="lg" className="w-full sm:w-auto shadow-lg bg-blue-600 hover:bg-blue-700 text-white">
+                  Learn More
+                </Button>
+              </a>
+              <a href="#contact">
+                <Button variant="outline" size="lg" className="w-full sm:w-auto shadow-lg border-2 border-blue-600 text-blue-600 hover:bg-blue-50">
+                  Contact Us
+                </Button>
+              </a>
             </div>
           </div>
         </div>
