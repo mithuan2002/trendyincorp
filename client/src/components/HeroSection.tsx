@@ -14,7 +14,7 @@ const HeroSection = () => {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [images.length]);
+  }, []);
 
   return (
     <section id="home" className="relative min-h-screen flex items-center bg-gradient-soft overflow-hidden pt-8">
@@ -44,6 +44,7 @@ const HeroSection = () => {
             <div className="relative mt-8">
               <div className="w-full h-96 relative animate-float">
                 <img 
+                  key={currentImageIndex}
                   src={images[currentImageIndex]}
                   alt="Premium textile manufacturing"
                   className="w-full h-full object-contain rounded-3xl shadow-2xl transform hover:scale-105 transition-all duration-500"
