@@ -3,15 +3,16 @@ import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import image1 from "@assets/p3_1756172693522.jpeg";
 import image2 from "@assets/p2_1756172992913.jpg";
+import image3 from "@assets/p1_1756173263411.jpg";
 
 const HeroSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const images = [image1, image2];
+  const images = [image1, image2, image3];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 1000);
+    }, 2500);
 
     return () => clearInterval(interval);
   }, []);
