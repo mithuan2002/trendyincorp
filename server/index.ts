@@ -47,9 +47,14 @@ app.use((req, res, next) => {
     throw err;
   });
 
-  // Force static file serving - bypass development server
-  console.log("Serving static files from production build");
-  serveStatic(app);
+  // Setup development server with Vite for development mode
+  if (process.env.NODE_ENV === "development") {
+    console.log("Setting up Vite development server");
+    await setupVite(app, server);
+  } else {
+    console.log("Serving static files from production build");
+    serveStatic(app);
+  }
 
   // ALWAYS serve the app on port 5000
   // this serves both the API and the client.

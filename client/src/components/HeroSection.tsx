@@ -1,6 +1,6 @@
 import { Globe, Award, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import floatingTextileImage from "@/assets/floating-textile.jpeg";
+import floatingTextileImage from "@/assets/hero-manufacturing.jpg";
 
 const HeroSection = () => {
   return (
